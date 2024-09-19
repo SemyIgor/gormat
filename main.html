@@ -1,0 +1,2662 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name=”keywords” contents=”html, course, css, tags” >
+    <meta name=”description” content=”Это базовый курс по HTML” >
+
+    <title>Gormat Tennis</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize-block-model.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" /> -->
+     <!-- end css -->
+
+    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="lib/fancybox/dist/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="lib/select-box/jquery.selectBox.css" rel="stylesheet" type="text/css">
+
+
+    <!-- <link rel="stylesheet" href="src/css/footer/footer.css"> -->
+    <!-- Асинхронная загрузка CSS с использованием JavaScript -->
+    <!-- <script>
+        function loadCSS(href, before, media) {
+            var ss = window.document.createElement("link");
+            var ref = before || window.document.getElementsByTagName("script")[0];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore(ss, ref);
+            function toggleMedia() {
+                var defined;
+                for (var i = 0; i < sheets.length; i++) {
+                    if (sheets[i].href && sheets[i].href.indexOf(href) > -1) {
+                        defined = true;
+                    }
+                }
+                if (defined) {
+                    ss.media = media || "all";
+                } else {
+                    setTimeout(toggleMedia);
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+
+        loadCSS("src/css/footer/footer.css");
+    </script> -->
+    <!-- Конец асинхронной загрузки CSS -->
+    <!-- css -->
+
+    <!-- js -->
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script async src="lib/swiper/swiper-bundle.min.js" type="text/javascript"></script>
+    <script async src="lib/fancybox/dist/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script async src="lib/select-box/jquery.selectBox.js" type="text/javascript"></script>
+
+    <script defer src="js/modules/main-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/main-mobile-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/mobile-menu-catalog.js" type="text/javascript"></script>
+    <script defer src="js/modules/account-list-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/img-svg.js" type="text/javascript"></script>
+    <script defer src="js/modules/categories-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/products-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/product-item-images-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/products-blue-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/backdrop.js" type="text/javascript"></script>
+
+    <script defer src="src/js/main.js"></script>
+    <!-- js -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header">
+            <div class="header__top">
+                <div class="header__top-container">
+                    <div class="header__top-text">Бесплатная доставка от 9 499р.</div>
+                </div>
+            </div>
+
+            <div class="header__content">
+                <div class="header__content-container d-flex-row-center">
+                    <div class="header__col header__col_1 d-flex-row-center">
+                        <div class="header__flag">
+                            <a href="#" class="header__flag__link opacity-hover">
+                                <img src="src/icons/flag/belarus.svg" alt="" class="header__flag__img">
+                            </a>
+                        </div>
+
+                        <div class="header__logo logo-header">
+                            <a href="#" class="logo-header__link opacity-hover">
+                                <img src="image/logo/logo.svg" alt="" class="logo-header__img">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header__col header__col_2 d-flex-row-center">
+                        <div class="header__search search-header">
+                            <input type="text" class="search-header__input" placeholder="Поиск по сайту">
+                            <button class="search-header__btn">
+                                <img src="src/icons/search/find.svg" alt="Поиск" class="search-header__icon _svg">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="header__col header__col_3 d-flex-row-center">
+                        <div class="header__social">
+                            <ul class="social-list">
+                                <li class="social-list__item social-list__item_telegram opacity-hover">
+                                    <a href="#" class="social-list__link">
+                                        <img src="src/icons/social/telegram.svg" alt="Telegram"
+                                            class="social-list__icon">
+                                    </a>
+                                </li>
+
+                                <li class="social-list__item social-list__item_viber">
+                                    <a href="#" class="social-list__link opacity-hover">
+                                        <img src="src/icons/social/viber.svg" alt="Viber" class="social-list__icon">
+                                    </a>
+                                </li>
+
+                                <li class="social-list__item social-list__item_instagram">
+                                    <a href="#" class="social-list__link opacity-hover">
+                                        <img src="src/icons/social/instagram.svg" alt="Instagram"
+                                            class="social-list__icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header__phone phone-header d-flex-column-center">
+                            <a href="tel:+375297858497" class="phone-header__link opacity-hover">+375 (29) 785 84 97</a>
+                        </div>
+
+                        <div class="header__account">
+                            <ul class="account-list d-flex-row-center">
+                                <li class="account-list__item account-list__item_wishlist">
+                                    <a href="#" class="account-list__link">
+                                        <span class="account-list__count">7</span>
+                                        <img src="src/icons/account/heart.svg" alt="Избранное"
+                                            class="account-list__icon _svg">
+                                    </a>
+                                </li>
+
+                                <li class="account-list__item account-list__item_login">
+                                    <a href="#" class="account-list__link">
+                                        <!-- <img src="src/icons/account/login.png" alt="Аккаунт" class="account-list__icon"> -->
+                                        <img src="src/icons/account/login.svg" alt="Аккаунт"
+                                            class="account-list__icon _svg">
+                                    </a>
+
+                                    <div class="account-list__item-sub-menu sub-menu-account">
+                                        <div class="sub-menu-account__content">
+                                            <div class="sub-menu-account__heading text-center">Личный кабинет</div>
+
+                                            <div class="sub-menu-account__buttons">
+                                                <button
+                                                    class="sub-menu-account__button btn btn_green btn_full">Авторизоваться</button>
+                                                <button
+                                                    class="sub-menu-account__button btn btn_green btn_full">Зарегистрироваться</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="account-list__item account-list__item_cart">
+                                    <a href="#" class="account-list__link">
+                                        <span class="account-list__count">3</span>
+                                        <img src="src/icons/account/shopping-cart-empty.svg" alt="Корзина"
+                                            class="account-list__icon _svg">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header__col header__col_4 d-flex-row-center">
+                        <div class="header__flag">
+                            <a href="#" class="header__flag__link opacity-hover">
+                                <img src="src/icons/flag/belarus.svg" alt="" class="header__flag__img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__main-menu main-menu">
+                <div class="main-menu__container">
+                    <nav class="main-menu__nav">
+                        <ul class="main-menu__list">
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Ракетки</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link active">Обувь</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Одежда</a>
+
+                                <div class="main-menu__sub-menu sub-menu-main">
+                                    <div class="sub-menu-main__container">
+                                        <div class="sub-menu-main__content">
+                                            <ul class="sub-menu-main__list">
+                                                <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                    <a href="#"
+                                                        class="sub-menu-main__link sub-menu-main__link_title">Мужская
+                                                        одежда</a>
+                                                </li>
+
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Боксеры</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Спортивные костюмы</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Жилеты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Куртки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Поло</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Шорты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Брюки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Футболки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Футболки (с длинным
+                                                        рукавом)</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul class="sub-menu-main__list">
+                                                <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                    <a href="#"
+                                                        class="sub-menu-main__link sub-menu-main__link_title">Женская
+                                                        одежда</a>
+                                                </li>
+
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Нижнее белье</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Спортивные костюмы</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Жилеты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Куртки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Леггинсы</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Поло</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Бюстгальтеры</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Шорты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Брюки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Юбки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Платья</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Футболки</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul class="sub-menu-main__list">
+                                                <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                    <a href="#"
+                                                        class="sub-menu-main__link sub-menu-main__link_title">Одежда для
+                                                        мальчиков</a>
+                                                </li>
+
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Боксеры</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Спортивные костюмы (8-15
+                                                        лет)</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Футболки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Шорты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Брюки</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul class="sub-menu-main__list">
+                                                <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                    <a href="#"
+                                                        class="sub-menu-main__link sub-menu-main__link_title">Одежда для
+                                                        девочек</a>
+                                                </li>
+
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Спортивные костюмы (8-15
+                                                        лет)</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Футболки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Шорты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Брюки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Юбки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Бюстгальтеры</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Платья</a>
+                                                </li>
+                                            </ul>
+
+                                            <ul class="sub-menu-main__list">
+                                                <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                    <a href="#"
+                                                        class="sub-menu-main__link sub-menu-main__link_title">Другое</a>
+                                                </li>
+
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Банданы</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Колпачки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Козырьки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Ободки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Браслеты</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Маски</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Теннисные очки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Ободки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Подготовка</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Полотенца</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Перчатки</a>
+                                                </li>
+                                                <li class="sub-menu-main__item">
+                                                    <a href="#" class="sub-menu-main__link">Носки</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Сумки</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Мячи</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Струны</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Аксессуары</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Для тренинга</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Распродажа</a>
+                            </li>
+
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link">Новинки</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+
+
+        <!-- mobile -->
+        <div class="mobile-main-menu">
+            <div class="mobile-main-menu__container">
+                <ul class="mobile-main-menu__list">
+                    <li class="mobile-main-menu__item mobile-main-menu__item_catalog">
+                        <button class="mobile-main-menu__btn" onclick="this.classList.toggle('active')">
+                            <img src="src/icons/account/burger.svg" alt="Каталог" class="mobile-main-menu__icon _svg">
+                        </button>
+                    </li>
+
+                    <li class="mobile-main-menu__item mobile-main-menu__item_wishlist">
+                        <button class="mobile-main-menu__btn" onclick="this.classList.toggle('active')">
+                            <span class="mobile-main-menu__count">7</span>
+                            <img src="src/icons/account/heart.svg" alt="Избранное" class="mobile-main-menu__icon _svg">
+                        </button>
+                    </li>
+
+                    <li class="mobile-main-menu__item mobile-main-menu__item_login">
+                        <button class="mobile-main-menu__btn" onclick="this.classList.toggle('active')">
+                            <img src="src/icons/account/login.svg" alt="Аккаунт" class="mobile-main-menu__icon _svg">
+                        </button>
+                    </li>
+
+                    <li class="mobile-main-menu__item mobile-main-menu__item_cart">
+                        <button class="mobile-main-menu__btn" onclick="this.classList.toggle('active')">
+                            <span class="mobile-main-menu__count">3</span>
+                            <img src="src/icons/account/shopping-cart-empty.svg" alt="Корзина"
+                                class="mobile-main-menu__icon _svg">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile-menu-catalog">
+            <nav class="mobile-menu-catalog__nav">
+                <ul class="mobile-menu-catalog__list">
+                    <li class="mobile-menu-catalog__item forward">
+                        <a href="#" class="mobile-menu-catalog__link">Ракетки</a>
+
+                        <div class="mobile-menu-catalog__sub-menu">
+                            <ul class="mobile-menu-catalog__list">
+                                <li class="mobile-menu-catalog__item back">
+                                    <a href="#" class="mobile-menu-catalog__link">Ракетки</a>
+                                </li>
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Мужская одежда</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Женская одежда</a>
+                                </li>      
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для мальчиков</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для девочек</a>
+                                </li>                                
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Другое</a>
+                                </li>                                
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mobile-menu-catalog__item forward">
+                        <a href="#" class="mobile-menu-catalog__link">Обувь</a>
+
+                        <div class="mobile-menu-catalog__sub-menu">
+                            <ul class="mobile-menu-catalog__list">
+                                <li class="mobile-menu-catalog__item back">
+                                    <a href="#" class="mobile-menu-catalog__link">Обувь</a>
+                                </li>
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Мужская одежда</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Женская одежда</a>
+                                </li>      
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для мальчиков</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для девочек</a>
+                                </li>                                
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Другое</a>
+                                </li>                                
+                            </ul>
+                        </div>                        
+                    </li>
+
+                    <li class="mobile-menu-catalog__item forward">
+                        <a href="#" class="mobile-menu-catalog__link">Одежда</a>
+                        
+                        <div class="mobile-menu-catalog__sub-menu">
+                            <ul class="mobile-menu-catalog__list">
+                                <li class="mobile-menu-catalog__item back">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда</a>
+                                </li>
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Мужская одежда</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Женская одежда</a>
+                                </li>      
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для мальчиков</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для девочек</a>
+                                </li>                                
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Другое</a>
+                                </li>                                
+                            </ul>
+                        </div>                           
+                    </li>
+
+                    <li class="mobile-menu-catalog__item forward">
+                        <a href="#" class="mobile-menu-catalog__link">Мячи</a>
+
+                        <div class="mobile-menu-catalog__sub-menu">
+                            <ul class="mobile-menu-catalog__list">
+                                <li class="mobile-menu-catalog__item back">
+                                    <a href="#" class="mobile-menu-catalog__link">Мячи</a>
+                                </li>
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Мужская одежда</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Женская одежда</a>
+                                </li>      
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для мальчиков</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для девочек</a>
+                                </li>                                
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Другое</a>
+                                </li>                                
+                            </ul>
+                        </div>                            
+                    </li>
+
+                    <li class="mobile-menu-catalog__item forward">
+                        <a href="#" class="mobile-menu-catalog__link">Струны</a>
+
+                        <div class="mobile-menu-catalog__sub-menu">
+                            <ul class="mobile-menu-catalog__list">
+                                <li class="mobile-menu-catalog__item back">
+                                    <a href="#" class="mobile-menu-catalog__link">Струны</a>
+                                </li>
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Мужская одежда</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Женская одежда</a>
+                                </li>      
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для мальчиков</a>
+                                </li>          
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Одежда для девочек</a>
+                                </li>                                
+
+                                <li class="mobile-menu-catalog__item">
+                                    <a href="#" class="mobile-menu-catalog__link">Другое</a>
+                                </li>                                
+                            </ul>
+                        </div>                           
+                    </li>
+
+                    <li class="mobile-menu-catalog__item">
+                        <a href="#a" class="mobile-menu-catalog__link">Аксессуары</a>
+                    </li>
+
+                    <li class="mobile-menu-catalog__item">
+                        <a href="#d" class="mobile-menu-catalog__link">Для тренинга</a>
+                    </li>
+
+                    <li class="mobile-menu-catalog__item">
+                        <a href="#r" class="mobile-menu-catalog__link">Распродажа</a>
+                    </li>
+
+                    <li class="mobile-menu-catalog__item">
+                        <a href="#n" class="mobile-menu-catalog__link">Новинки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="backdrop-wall"></div>
+        <!-- mobile -->
+
+
+
+
+        <!-- main -->
+        <main class="main">
+            <!-- banners -->
+            <section class="banner">
+                <div class="banner__list banner__list_full-width">
+                    <div class="banner__item">
+                        <a href="#" class="banner__link opacity-hover">
+                            <img src="image/banner/slideshow/slide-01.jpg" alt="" class="banner__img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- banners -->
+
+
+
+            <!-- products swiper -->
+            <div class="module-swiper products-swiper">
+                <div class="module-swiper__container products-swiper__container">
+                    <div class="module-swiper__heading products-swiper__heading">Новинки</div>
+
+                    <div class="module-swiper__content products-swiper__content">
+                        <!-- products-swiper__carousel -->
+                        <div class="products-swiper__swiper swiper">
+                            <!-- Wrapper -->
+                            <div class="products-swiper__swiper-wrapper swiper-wrapper">
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__stickers">
+                                            <div class="product-item__sticker product-item__sticker_discount">Скидка
+                                            </div>
+                                            <div class="product-item__sticker product-item__sticker_new">Новинка</div>
+                                            <div class="product-item__sticker product-item__sticker_sale">Распродажа
+                                            </div>
+                                        </div>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">XS</div>
+                                                <div class="product-item__size-list-item">M</div>
+                                                <div class="product-item__size-list-item">L</div>
+                                                <div class="product-item__size-list-item">XL</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+
+                                <!-- delete -->
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+                                <!-- delete -->
+
+                                <!-- Wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- products swiper -->
+
+
+
+            <!-- categories swiper -->
+            <div class="module-swiper categories-swiper">
+                <div class="module-swiper__container categories-swiper__container">
+                    <div class="module-swiper__heading categories-swiper__heading">Категории</div>
+
+                    <div class="module-swiper__content categories-swiper__content">
+                        <!-- categories-swiper__carousel -->
+                        <div class="categories-swiper__carousel swiper">
+                            <!-- Wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/raketki.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Ракетки</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/obuv.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Обувь</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/odejda.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Одежда</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/sumki.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Сумки</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/myachi.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Мячи</div>
+                                    </a>
+                                </div>
+                                <!-- Slides -->
+
+                                <!-- delete -->
+                                <!-- Slides -->
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/raketki.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Ракетки</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/obuv.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Обувь</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/odejda.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Одежда</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/sumki.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Сумки</div>
+                                    </a>
+                                </div>
+
+                                <div class="categories-swiper__carousel-slide swiper-slide">
+                                    <a href="#" class="categories-swiper__carousel-slide-link opacity-hover">
+                                        <img src="image/category/myachi.jpg" alt=""
+                                            class="categories-swiper__carousel-slide-img">
+
+                                        <div class="categories-swiper__carousel-slide-caption">Мячи</div>
+                                    </a>
+                                </div>
+                                <!-- Slides -->
+                                <!-- delete -->
+                            </div>
+                            <!-- Wrapper -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- categories swiper -->
+
+
+
+            <!-- products swiper -->
+            <div class="module-swiper products-swiper">
+                <div class="module-swiper__container products-swiper__container">
+                    <div class="module-swiper__heading products-swiper__heading">Распродажа</div>
+
+                    <div class="module-swiper__content products-swiper__content">
+                        <!-- products-swiper__carousel -->
+                        <div class="products-swiper__swiper swiper">
+                            <!-- Wrapper -->
+                            <div class="products-swiper__swiper-wrapper swiper-wrapper">
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+
+                                <!-- delete -->
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+                                <!-- delete -->
+
+                                <!-- Wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- products swiper -->
+
+
+
+            <!-- products blue swiper -->
+            <div class="module-swiper product-blue-swiper">
+                <div class="module-swiper__container product-blue-swiper__container">
+                    <div class="module-swiper__content product-blue-swiper__content">
+                        <!-- product-blue-swiper__carousel -->
+                        <div class="product-blue-swiper__carousel swiper">
+                            <!-- Wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="product-blue__item swiper-slide">
+                                    <a href="#" class="product-blue__link opacity-hover">
+                                        <img src="image/product/product-blue-01.jpg" alt="" class="pproduct-blue__img">
+
+                                        <div class="product-blue__description">
+                                            <div class="product-blue__name">Худи Björn Borg Sthlm - зимний зеленый
+                                            </div>
+
+                                            <div class="product-blue__price">
+                                                <div class="product-blue__price-current">6 386,00р.</div>
+                                                <div class="product-blue__price-old">7 990,00р.</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="product-blue__item swiper-slide">
+                                    <a href="#" class="product-blue__link opacity-hover">
+                                        <img src="image/product/product-blue-02.jpg" alt="" class="pproduct-blue__img">
+
+                                        <div class="product-blue__description">
+                                            <div class="product-blue__name">Худи Björn Borg Sthlm - зимний зеленый
+                                            </div>
+
+                                            <div class="product-blue__price">
+                                                <div class="product-blue__price-current">5 609,00р.</div>
+                                                <div class="product-blue__price-old">7 990,00р.</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-blue__item swiper-slide">
+                                    <a href="#" class="product-blue__link opacity-hover">
+                                        <img src="image/product/product-blue-03.jpg" alt="" class="pproduct-blue__img">
+
+                                        <div class="product-blue__description">
+                                            <div class="product-blue__name">Худи Björn Borg Sthlm - зимний зеленый
+                                            </div>
+
+                                            <div class="product-blue__price">
+                                                <div class="product-blue__price-current">7 745,00р.</div>
+                                                <div class="product-blue__price-old">7 990,00р.</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-blue__item swiper-slide">
+                                    <a href="#" class="product-blue__link opacity-hover">
+                                        <img src="image/product/product-blue-01.jpg" alt="" class="pproduct-blue__img">
+
+                                        <div class="product-blue__description">
+                                            <div class="product-blue__name">Худи Björn Borg Sthlm - зимний зеленый
+                                            </div>
+
+                                            <div class="product-blue__price">
+                                                <div class="product-blue__price-current">7 745,00р.</div>
+                                                <div class="product-blue__price-old">7 990,00р.</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product-blue__item swiper-slide">
+                                    <a href="#" class="product-blue__link opacity-hover">
+                                        <img src="image/product/product-blue-02.jpg" alt="" class="pproduct-blue__img">
+
+                                        <div class="product-blue__description">
+                                            <div class="product-blue__name">Худи Björn Borg Sthlm - зимний зеленый
+                                            </div>
+
+                                            <div class="product-blue__price">
+                                                <div class="product-blue__price-current">6 386,00р.</div>
+                                                <div class="product-blue__price-old">7 990,00р.</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Slides -->
+                                <!-- delete -->
+                            </div>
+                            <!-- Wrapper -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- products blue swiper -->
+
+
+
+            <!-- products swiper -->
+            <div class="module-swiper products-swiper">
+                <div class="module-swiper__container products-swiper__container">
+                    <div class="module-swiper__heading products-swiper__heading">Новые поступления</div>
+
+                    <div class="module-swiper__content products-swiper__content">
+                        <!-- products-swiper__carousel -->
+                        <div class="products-swiper__swiper swiper">
+                            <!-- Wrapper -->
+                            <div class="products-swiper__swiper-wrapper swiper-wrapper">
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+
+                                <!-- delete -->
+                                <!-- Slide Item 1 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-00.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-01.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/wilson.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-old">23 990,00р.</div>
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                            <div class="product-item__price-sale-percent">Скидка 10%</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 1 -->
+
+                                <!-- Slide Item 2 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-04.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand">
+                                                <a href="#" class="product-item__brand-link opacity-hover">
+                                                    <img src="image/brand/lacoste.jpg" alt=""
+                                                        class="product-item__brand-img">
+                                                </a>
+                                            </div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка для большого
+                                                    тенниса</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 2 -->
+
+                                <!-- Slide Item 3 -->
+                                <div class="products-swiper__swiper-slide swiper-slide">
+                                    <div class="product-item product-item_options">
+                                        <button class="product-item__wishlist-button"
+                                            onclick="this.classList.toggle('active')"></button>
+
+                                        <div class="product-item__content">
+                                            <!-- images -->
+                                            <div class="product-item__images-slider-wrapper">
+                                                <div
+                                                    class="product-item__images-slider product-item__images-swiper swiper">
+                                                    <div class="product-item__images-swiper-wrapper swiper-wrapper">
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-02.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+
+                                                        <div
+                                                            class="product-item__images-item product-item__images-swiper-slide swiper-slide">
+                                                            <a href="#" class="product-item__images-link opacity-hover">
+                                                                <img src="image/product/product-03.jpg" alt=""
+                                                                    class="product-item__images-img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="product-item__images-swiper-pagination swiper-pagination">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- images -->
+
+                                            <div class="product-item__brand"></div>
+
+                                            <div class="product-item__description">
+                                                <div class="product-item__category">Теннисная ракетка</div>
+
+                                                <div class="product-item__name">
+                                                    <a href="#" class="product-item__name-link opacity-hover">
+                                                        Wilson Clash 100 PRO V2.0 + натяжка + сервис Wilson Clash 100
+                                                        PRO V2.0 + натяжка + сервис Wilson Clash 100 PRO V2.0 + натяжка
+                                                        + сервис Wilson Clash 100 PRO V2.0 + натяжка + сервис
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-item__price">
+                                            <div class="product-item__price-current">21 745,00р.</div>
+                                        </div>
+
+
+                                        <div class="product-item__size">
+                                            <div class="product-item__size-title">Доступные размеры:</div>
+
+                                            <div class="product-item__size-list">
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                                <div class="product-item__size-list-item">1</div>
+                                                <div class="product-item__size-list-item">2</div>
+                                                <div class="product-item__size-list-item">3</div>
+                                                <div class="product-item__size-list-item">4</div>
+                                                <div class="product-item__size-list-item">5</div>
+                                                <div class="product-item__size-list-item">6</div>
+                                                <div class="product-item__size-list-item">7</div>
+                                                <div class="product-item__size-list-item">8</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Item -->
+                                </div>
+                                <!-- Slide Item 3 -->
+                                <!-- delete -->
+
+                                <!-- Wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- products swiper -->
+
+
+
+            <!-- banners -->
+            <section class="banner">
+                <div class="banner__list banner__list_full-width">
+                    <div class="banner__item">
+                        <a href="#" class="banner__link opacity-hover">
+                            <img src="image/banner/brand-yonex-01.jpg" alt="" class="banner__img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="banner">
+                <div class="banner__list banner__list_col-2">
+                    <div class="banner__item">
+                        <a href="#" class="banner__link opacity-hover">
+                            <img src="image/banner/brand-k-swiss-01.jpg" alt="" class="banner__img">
+                        </a>
+                    </div>
+
+                    <div class="banner__item">
+                        <a href="#" class="banner__link opacity-hover">
+                            <img src="image/banner/brand-nike-01.jpg" alt="" class="banner__img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- banners -->
+        </main>
+        <!-- main -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__contacts">
+                    <div class="footer__logo">
+                        <a href="#" class="footer__logo-link opacity-hover">
+                            <img src="image/logo/logo_footer.svg" alt="Gormat-Tennis.by" class="footer__logo-img">
+                        </a>
+                    </div>
+
+                    <div class="footer__phones">
+                        <a href="tel:+375297858497" class="footer__phone-link phone-link opacity-hover">+375 (29) 785 84
+                            97</a>
+                        <a href="tel:+48518528903" class="footer__phone-link phone-link opacity-hover">+48 518 528
+                            903</a>
+                    </div>
+
+                    <div class="footer__social">
+                        <ul class="social-list">
+                            <li class="social-list__item social-list__item_telegram opacity-hover">
+                                <a href="#" class="social-list__link">
+                                    <img src="src/icons/social/telegram.svg" alt="Telegram" class="social-list__icon">
+                                </a>
+                            </li>
+
+                            <li class="social-list__item social-list__item_viber">
+                                <a href="#" class="social-list__link opacity-hover">
+                                    <img src="src/icons/social/viber.svg" alt="Viber" class="social-list__icon">
+                                </a>
+                            </li>
+
+                            <li class="social-list__item social-list__item_instagram">
+                                <a href="#" class="social-list__link opacity-hover">
+                                    <img src="src/icons/social/instagram.svg" alt="Instagram" class="social-list__icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__menu">
+                    <nav class="footer__nav">
+                        <!-- col 1 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Ракетки</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Для взрослых</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Б/У</a>
+                            </li>
+                        </ul>
+                        <!-- col 1 -->
+
+                        <!-- col 2 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Одежда</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мужская</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Женская</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                            </li>
+                        </ul>
+                        <!-- col 2 -->
+
+                        <!-- col 3 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Мячи</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                            </li>
+                        </ul>
+                        <!-- col 3 -->
+
+                        <!-- col 4 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Аксессуары</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                            </li>
+                        </ul>
+                        <!-- col 4 -->
+
+                        <!-- col 5 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Обувь</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мужская</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Женская</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                            </li>
+                        </ul>
+                        <!-- col 5 -->
+
+                        <!-- col 6 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Сумки</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Теннисные сумки</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Рюкзаки</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Чехлы</a>
+                            </li>
+                        </ul>
+                        <!-- col 6 -->
+
+                        <!-- col 7 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Струны</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                            </li>
+                        </ul>
+                        <!-- col 7 -->
+
+                        <!-- col 8 -->
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link footer__link_heading opacity-hover">Для тренинга</a>
+                            </li>
+
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                            </li>
+                        </ul>
+                        <!-- col 8 -->
+                    </nav>
+                </div>
+
+                <div class="footer__copyright">© 2023 Gormat-tennis.by - платформа по доставке товаров со всего мира
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+
+</html>
