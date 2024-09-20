@@ -540,7 +540,7 @@ input:focus::placeholder {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("../../icons/product/heart_empty.svg") no-repeat center center/18px 18px;
+  background: url("../icons/product/heart_empty.svg") no-repeat center center/18px 18px;
   cursor: pointer;
   position: absolute;
   top: 7px;
@@ -549,7 +549,7 @@ input:focus::placeholder {
 }
 
 .product-item__wishlist-button.active {
-  background-image: url("../../icons/product/heart_fill.svg");
+  background-image: url("../icons/product/heart_fill.svg");
 }
 
 .product-item__stickers {
@@ -917,7 +917,7 @@ input:focus::placeholder {
 
 .footer__phone-link {
   color: #fff;
-  background: url(../../icons/contact/phone_blue.svg) no-repeat left center;
+  background: url(../icons/contact/phone_blue.svg) no-repeat left center;
   padding-left: 20px;
   font-size: 18px;
 }
@@ -1125,7 +1125,7 @@ input:focus::placeholder {
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
-  background: url("/icons/contact/phone_black.svg") no-repeat left center;
+  background: url("../icons/contact/phone_black.svg") no-repeat left center;
   padding-left: 20px;
   color: var(--color-black);
 }
@@ -1661,12 +1661,12 @@ input:focus::placeholder {
 }
 
 .mobile-menu-catalog__item.forward > .mobile-menu-catalog__link {
-  background: url("../../icons/ui/arrow-chevron-right.svg") no-repeat right center/5px 10px;
+  background: url("../icons/ui/arrow-chevron-right.svg") no-repeat right center/5px 10px;
   padding-right: 13px;
 }
 
 .mobile-menu-catalog__item.back > .mobile-menu-catalog__link {
-  background: url("../../icons/ui/arrow-chevron-left.svg") no-repeat left center/5px 10px;
+  background: url("../icons/ui/arrow-chevron-left.svg") no-repeat left center/5px 10px;
   padding-left: 13px;
 }
 
