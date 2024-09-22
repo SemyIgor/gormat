@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name=”keywords” contents=”html, course, css, tags” >
+    <meta name=”description” content=”Это базовый курс по HTML” >
+
+    <title>Gormat Tennis</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize-block-model.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" /> -->
+    
+    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="lib/fancybox/dist/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="lib/select-box/jquery.selectBox.css" rel="stylesheet" type="text/css">
+    <!-- end css -->
+    
+    <!-- js -->
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script async src="lib/swiper/swiper-bundle.min.js" type="text/javascript"></script>
+    <script async src="lib/fancybox/dist/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script async src="lib/select-box/jquery.selectBox.js" type="text/javascript"></script>
+
+    <script defer src="js/modules/main-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/main-mobile-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/mobile-menu-catalog.js" type="text/javascript"></script>
+    <script defer src="js/modules/account-list-menu.js" type="text/javascript"></script>
+    <script defer src="js/modules/img-svg.js" type="text/javascript"></script>
+    <script defer src="js/modules/categories-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/products-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/product-item-images-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/products-blue-swiper.js" type="text/javascript"></script>
+    <script defer src="js/modules/backdrop.js" type="text/javascript"></script>
+
+    <script defer src="js/main.js"></script>
+    <!-- end js -->
+</head>
+
+<body>
+   <!-- wrapper -->
+   <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+         <div class="header__top">
+             <div class="header__top-container">
+                 <div class="header__top-text">Бесплатная доставка от 9 499р.</div>
+             </div>
+         </div>
+
+         <div class="header__content">
+             <div class="header__content-container d-flex-row-center">
+                 <div class="header__col header__col_1 d-flex-row-center">
+                     <div class="header__flag">
+                         <a href="#" class="header__flag__link opacity-hover">
+                             <img src="icons/flag/belarus.svg" alt="" class="header__flag__img">
+                         </a>
+                     </div>
+
+                     <div class="header__logo logo-header">
+                         <a href="#" class="logo-header__link opacity-hover">
+                             <img src="image/logo/logo.svg" alt="" class="logo-header__img">
+                         </a>
+                     </div>
+                 </div>
+
+                 <div class="header__col header__col_2 d-flex-row-center">
+                     <div class="header__search search-header">
+                         <input type="text" class="search-header__input" placeholder="Поиск по сайту">
+                         <button class="search-header__btn">
+                             <img src="icons/search/find.svg" alt="Поиск" class="search-header__icon _svg">
+                         </button>
+                     </div>
+                 </div>
+
+                 <div class="header__col header__col_3 d-flex-row-center">
+                     <div class="header__social">
+                         <ul class="social-list">
+                             <li class="social-list__item social-list__item_telegram opacity-hover">
+                                 <a href="#" class="social-list__link">
+                                     <img src="icons/social/telegram.svg" alt="Telegram"
+                                         class="social-list__icon">
+                                 </a>
+                             </li>
+
+                             <li class="social-list__item social-list__item_viber">
+                                 <a href="#" class="social-list__link opacity-hover">
+                                     <img src="icons/social/viber.svg" alt="Viber" class="social-list__icon">
+                                 </a>
+                             </li>
+
+                             <li class="social-list__item social-list__item_instagram">
+                                 <a href="#" class="social-list__link opacity-hover">
+                                     <img src="icons/social/instagram.svg" alt="Instagram"
+                                         class="social-list__icon">
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+
+                     <div class="header__phone phone-header d-flex-column-center">
+                         <a href="tel:+375297858497" class="phone-header__link opacity-hover">+375 (29) 785 84 97</a>
+                     </div>
+
+                     <div class="header__account">
+                         <ul class="account-list d-flex-row-center">
+                             <li class="account-list__item account-list__item_wishlist">
+                                 <a href="favorites.html" class="account-list__link">
+                                     <span class="account-list__count">7</span>
+                                     <img src="icons/account/heart.svg" alt="Избранное"
+                                         class="account-list__icon _svg">
+                                 </a>
+                             </li>
+
+                             <li class="account-list__item account-list__item_login">
+                                 <a href="#" class="account-list__link">
+                                     <!-- <img src="icons/account/login.png" alt="Аккаунт" class="account-list__icon"> -->
+                                     <img src="icons/account/login.svg" alt="Аккаунт"
+                                         class="account-list__icon _svg">
+                                 </a>
+
+                                 <div class="account-list__item-sub-menu sub-menu-account">
+                                     <div class="sub-menu-account__content">
+                                         <div class="sub-menu-account__heading text-center">Личный кабинет</div>
+
+                                         <div class="sub-menu-account__buttons">
+                                             <button
+                                                 class="sub-menu-account__button btn btn_green btn_full">Авторизоваться</button>
+                                             <button
+                                                 class="sub-menu-account__button btn btn_green btn_full">Зарегистрироваться</button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+
+                             <li class="account-list__item account-list__item_cart">
+                                 <a href="cart_person.html" class="account-list__link">
+                                     <span class="account-list__count">3</span>
+                                     <img src="icons/account/shopping-cart-empty.svg" alt="Корзина"
+                                         class="account-list__icon _svg">
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+
+                 <div class="header__col header__col_4 d-flex-row-center">
+                     <div class="header__flag">
+                         <a href="#" class="header__flag__link opacity-hover">
+                             <img src="icons/flag/belarus.svg" alt="" class="header__flag__img">
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="header__main-menu main-menu">
+             <div class="main-menu__container">
+                 <nav class="main-menu__nav">
+                     <ul class="main-menu__list">
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Ракетки</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link active">Обувь</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Одежда</a>
+
+                             <div class="main-menu__sub-menu sub-menu-main">
+                                 <div class="sub-menu-main__container">
+                                     <div class="sub-menu-main__content">
+                                         <ul class="sub-menu-main__list">
+                                             <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                 <a href="#"
+                                                     class="sub-menu-main__link sub-menu-main__link_title">Мужская
+                                                     одежда</a>
+                                             </li>
+
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Боксеры</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Спортивные костюмы</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Жилеты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Куртки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Поло</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Шорты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Брюки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Футболки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Футболки (с длинным
+                                                     рукавом)</a>
+                                             </li>
+                                         </ul>
+
+                                         <ul class="sub-menu-main__list">
+                                             <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                 <a href="#"
+                                                     class="sub-menu-main__link sub-menu-main__link_title">Женская
+                                                     одежда</a>
+                                             </li>
+
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Нижнее белье</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Спортивные костюмы</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Жилеты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Куртки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Леггинсы</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Поло</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Бюстгальтеры</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Шорты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Брюки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Юбки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Платья</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Футболки</a>
+                                             </li>
+                                         </ul>
+
+                                         <ul class="sub-menu-main__list">
+                                             <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                 <a href="#"
+                                                     class="sub-menu-main__link sub-menu-main__link_title">Одежда для
+                                                     мальчиков</a>
+                                             </li>
+
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Боксеры</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Спортивные костюмы (8-15
+                                                     лет)</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Футболки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Шорты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Брюки</a>
+                                             </li>
+                                         </ul>
+
+                                         <ul class="sub-menu-main__list">
+                                             <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                 <a href="#"
+                                                     class="sub-menu-main__link sub-menu-main__link_title">Одежда для
+                                                     девочек</a>
+                                             </li>
+
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Толстовки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Спортивные костюмы (8-15
+                                                     лет)</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Футболки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Шорты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Брюки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Юбки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Бюстгальтеры</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Платья</a>
+                                             </li>
+                                         </ul>
+
+                                         <ul class="sub-menu-main__list">
+                                             <li class="sub-menu-main__item sub-menu-main__item_title">
+                                                 <a href="#"
+                                                     class="sub-menu-main__link sub-menu-main__link_title">Другое</a>
+                                             </li>
+
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Банданы</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Колпачки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Козырьки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Ободки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Браслеты</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Маски</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Теннисные очки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Ободки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Подготовка</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Полотенца</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Перчатки</a>
+                                             </li>
+                                             <li class="sub-menu-main__item">
+                                                 <a href="#" class="sub-menu-main__link">Носки</a>
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </div>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Сумки</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Мячи</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Струны</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Аксессуары</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Для тренинга</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Распродажа</a>
+                         </li>
+
+                         <li class="main-menu__item">
+                             <a href="#" class="main-menu__link">Новинки</a>
+                         </li>
+                     </ul>
+                 </nav>
+             </div>
+         </div>
+     </header>
+     <!-- header -->
+
+<h1 style="padding: 50px 0; text-align: center;">payment</h1>
+
+        <!-- footer -->
+        <footer class="footer">
+         <div class="footer__container">
+             <div class="footer__contacts">
+                 <div class="footer__logo">
+                     <a href="#" class="footer__logo-link opacity-hover">
+                         <img src="image/logo/logo_footer.svg" alt="Gormat-Tennis.by" class="footer__logo-img">
+                     </a>
+                 </div>
+
+                 <div class="footer__phones">
+                     <a href="tel:+375297858497" class="footer__phone-link phone-link opacity-hover">+375 (29) 785 84
+                         97</a>
+                     <a href="tel:+48518528903" class="footer__phone-link phone-link opacity-hover">+48 518 528
+                         903</a>
+                 </div>
+
+                 <div class="footer__social">
+                     <ul class="social-list">
+                         <li class="social-list__item social-list__item_telegram opacity-hover">
+                             <a href="#" class="social-list__link">
+                                 <img src="icons/social/telegram.svg" alt="Telegram" class="social-list__icon">
+                             </a>
+                         </li>
+
+                         <li class="social-list__item social-list__item_viber">
+                             <a href="#" class="social-list__link opacity-hover">
+                                 <img src="icons/social/viber.svg" alt="Viber" class="social-list__icon">
+                             </a>
+                         </li>
+
+                         <li class="social-list__item social-list__item_instagram">
+                             <a href="#" class="social-list__link opacity-hover">
+                                 <img src="icons/social/instagram.svg" alt="Instagram" class="social-list__icon">
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+
+             <div class="footer__menu">
+                 <nav class="footer__nav">
+                     <!-- col 1 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Ракетки</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Для взрослых</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Б/У</a>
+                         </li>
+                     </ul>
+                     <!-- col 1 -->
+
+                     <!-- col 2 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Одежда</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мужская</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Женская</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                         </li>
+                     </ul>
+                     <!-- col 2 -->
+
+                     <!-- col 3 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Мячи</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                         </li>
+                     </ul>
+                     <!-- col 3 -->
+
+                     <!-- col 4 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Аксессуары</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                         </li>
+                     </ul>
+                     <!-- col 4 -->
+
+                     <!-- col 5 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Обувь</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мужская</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Женская</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Для юниоров</a>
+                         </li>
+                     </ul>
+                     <!-- col 5 -->
+
+                     <!-- col 6 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Сумки</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Теннисные сумки</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Рюкзаки</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Чехлы</a>
+                         </li>
+                     </ul>
+                     <!-- col 6 -->
+
+                     <!-- col 7 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Струны</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                         </li>
+                     </ul>
+                     <!-- col 7 -->
+
+                     <!-- col 8 -->
+                     <ul class="footer__list">
+                         <li class="footer__item">
+                             <a href="#" class="footer__link footer__link_heading opacity-hover">Для тренинга</a>
+                         </li>
+
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Теннисные мячи</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Мячи в коробках</a>
+                         </li>
+                         <li class="footer__item">
+                             <a href="#" class="footer__link opacity-hover">Юниорские мячи</a>
+                         </li>
+                     </ul>
+                     <!-- col 8 -->
+                 </nav>
+             </div>
+
+             <div class="footer__copyright">© 2023 Gormat-tennis.by - платформа по доставке товаров со всего мира
+             </div>
+         </div>
+     </footer>
+     <!-- footer -->
+
+   </div>
+   <!-- end wrapper -->
+</body>
+
+</html>
