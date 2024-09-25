@@ -177,11 +177,12 @@ section {
   --color-red: #E31235;
   --color-white: #fff;
   --color-black-header-bg: #1E1D21;
-  --color-black-header-border: #333333;
   --color-black-footer: #1E1D21;
-  --margin-60: 60px;
+  --color-black-header-border: #333333;
   --color-green: #45AC34;
   --color-black-header-top: #28272B;
+  --margin-60: 60px;
+  --margin-40: 40px;
 }
 
 /* responsive */
@@ -230,7 +231,8 @@ footer {
 /* header main footer */
 [class*=container] {
   width: 100%;
-  max-width: 1170px;
+  /* max-width: 1170px; */
+  max-width: 1200px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
@@ -881,6 +883,165 @@ input:focus::placeholder {
   }
 }
 /* responsive */
+.page-header {
+  margin-bottom: calc(var(--margin-60) / 3);
+  margin-top: calc(var(--margin-40));
+  color: var(--color-black);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.category-cards__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+}
+
+.category-swiper__swiper-slide {
+  max-width: 270px;
+}
+
+.category-filters__container {
+  min-height: 125px;
+  background-color: #E6E6E7;
+}
+
+.category-top-pagination__container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.category__quantity {
+  position: relative;
+  min-width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.category__quantity a {
+  font-size: 18px;
+  color: #1E1D21;
+}
+
+.category__quantity-content {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  /* background-color: #fff; */
+  border: 1px solid #e6e6e7;
+  border-radius: 6px;
+  /* padding: 14px 10px 14px 20px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  width: 72px;
+  /* height: 118px; */
+  -webkit-box-shadow: 0 2px 10px 0 rgba(178, 178, 179, 0.7);
+  box-shadow: 0 2px 10px 0 rgba(178, 178, 179, 0.7);
+  background: #fff;
+}
+.category__quantity-content a:not(:first-child) {
+  display: none;
+}
+
+.category__quantity-content:hover .category__quantity-content a:not(:first-child) {
+  display: block;
+}
+
+.category__quantity-btn {
+  font-size: 18px;
+  color: #1E1D21;
+  display: block;
+}
+
+.category-bottom-pagination {
+  margin-bottom: calc(var(--margin-60));
+  margin-top: calc(var(--margin-40) / 2);
+}
+.category-bottom-pagination__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.category-info {
+  margin-bottom: 100px;
+}
+
+.category-info__header {
+  font-size: 24px;
+  color: calc(var(--color-black-footer));
+}
+.category-info__header:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.category-info__text {
+  font-size: 18px;
+  color: #929292;
+  margin-top: 10px;
+}
+
+.category-info__text ~ .category-info__text {
+  margin-top: 0px;
+}
+
+.category-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* gap: 25px; */
+  gap: 3px;
+  margin: 0 auto;
+}
+
+.category-pagination li.active {
+  background-color: #E6E6E7;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.category-pagination a {
+  font-size: 20px;
+  color: #1E1D21;
+  padding: 3px 11px;
+}
+
 .footer {
   background: var(--color-black-footer);
   padding: 60px 0 30px 0;
