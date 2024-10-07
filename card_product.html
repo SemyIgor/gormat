@@ -39,6 +39,9 @@
     <script defer src="js/modules/products-blue-swiper.js" type="text/javascript"></script>
     <script defer src="js/modules/backdrop.js" type="text/javascript"></script>
 
+    <script defer src="js/modules/card_product_tabs.js" type="text/javascript"></script>
+    <script defer src="js/modules/product_counter.js" type="text/javascript"></script>
+
     <script defer src="js/main.js"></script>
     <!-- end js -->
 </head>
@@ -414,7 +417,7 @@
 <section class="product-card">
    <div class="product-card__container">
 
-      <h2 class="product-view__title">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology - красный/оранжевый</h2>
+      <h2 class="product-card__title">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology - красный/оранжевый</h2>
 
       <div class="product-view">
          <div class="product-images">
@@ -442,7 +445,10 @@
                         <div class="product-slider__slide swiper-slide">
                            <img src="image/card_product/image-03.jpg" alt="Image 3">
                         </div>
-   
+                                 
+                        <div class="product-slider__slide swiper-slide active">
+                           <img src="image/card_product/image-01.jpg" alt="Image 1">
+                        </div>
                      </div>
                   </div>
    
@@ -461,19 +467,32 @@
    
             <p class="product-code">КОД: DH5174-00-WI9</p>
 
-            <div class="product-item__price">
+            <div class="price-and-counter">
+               
+               <div class="product-item__price">
    <div class="product-item__price-old">23 990,00р.</div>
    <div class="product-item__price-current">21 745,00р.</div>
    <div class="product-item__price-sale-percent">Скидка 10%</div>
 </div>
+   
+               <div class="product-counter">
+                  <button class="product__btn--minus">
+                     <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                  </button>
+                  <input type="number" name="product-name" id="" class="product-number" value="1">
+                  <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg" alt="Plus"></button>
+               </div>
 
-            <div class="product-item__stickers">
-   <div class="product-item__sticker product-item__sticker_discount active">Скидка
-   </div>
-   <div class="product-item__sticker product-item__sticker_new active">Новинка</div>
-   <div class="product-item__sticker product-item__sticker_sale active">Распродажа
-   </div>
-</div>
+            </div>
+
+
+            <div class="product-item__stickers product-card__stickers">
+               <div class="product-item__sticker product-item__sticker_discount active">Скидка
+               </div>
+               <div class="product-item__sticker product-item__sticker_new active">Новинка</div>
+               <div class="product-item__sticker product-item__sticker_sale">Распродажа
+               </div>
+            </div>
 
             <h4 class="variants-title">Варианты:</h4>
             <div class="variants-images">
@@ -524,7 +543,7 @@
             <div class="product-buttons">
 
                <div class="product-counter">
-                  <button class="product__btn--minus"  onclick="">
+                  <button class="product__btn--minus">
                      <img src="image/card_product/product_btn_minus.svg" alt="Minus">
                   </button>
                   <input type="number" name="product-name" id="" class="product-number" value="1">
@@ -543,11 +562,23 @@
          </div>
       </div>
 
-      <div class="product-description--header">
-         Описание
+      <div class="product-description__tabs">
+
+         <label>
+            <input type="radio" name="description-tabs" class="real-radio" value="" data-product-id="01" checked>
+            <div class="product-description__header">Описание</div>
+         </label>
+
+         <label>
+            <input type="radio" name="description-tabs" class="real-radio" value="" data-product-id="02">
+            <div class="product-description__header">Преимущества</div>
+         </label>
+
       </div>
-      <div class="product-description__info">
-         <p class="product-description__text">
+
+
+      <div class="product-description__info" data-product-id="01">
+         <p>
             Застегивается на шее на две пуговицы. Слегка эластичная ткань движется вместе с вами. Поло сшито в обычном крое. Слегка удлиненная спинка обеспечивает комфорт и защиту. Поло происходит из коллекции, подготовленной специально для Новака Джоковича. Изготовлен из материалов высочайшего качества по следующим технологиям: ULTRA DRY, UPF-30.
          </p>
 
@@ -585,6 +616,48 @@
 
          </div>
       </div>
+
+      <div class="product-description__info info--hidden" data-product-id="02">
+         <p>
+            Застегивается на шее на две пуговицы. Слегка эластичная ткань движется вместе с вами. Поло сшито в обычном крое. Слегка удлиненная спинка обеспечивает комфорт и защиту. Поло происходит из коллекции, подготовленной специально для Новака Джоковича. Изготовлен из материалов высочайшего качества по следующим технологиям: ULTRA DRY, UPF-30.
+            Застегивается на шее на две пуговицы. Слегка эластичная ткань движется вместе с вами. Поло сшито в обычном крое. Слегка удлиненная спинка обеспечивает комфорт и защиту. Поло происходит из коллекции, подготовленной специально для Новака Джоковича. Изготовлен из материалов высочайшего качества по следующим технологиям: ULTRA DRY, UPF-30.
+         </p>
+
+         <div class="product-description__table">
+            
+            <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Артикул:</div>
+               <div class="product-description__table-column--2">СТ91525.1</div>
+            </div>
+
+            <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Код продукта:</div>
+               <div class="product-description__table-column--2">DH5174-00-WI9</div>
+            </div>
+
+            <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Основной цвет:</div>
+               <div class="product-description__table-column--2">Красный</div>
+            </div>
+
+            <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Цвет логотипа:</div>
+               <div class="product-description__table-column--2">Зеленый</div>
+            </div>
+
+            <!-- <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Материал:</div>
+               <div class="product-description__table-column--2">100% полиэстер</div>
+            </div>
+
+            <div class="product-description__table-row">
+               <div class="product-description__table-column--1">Технологии:</div>
+               <div class="product-description__table-column--2">УЛЬТРА СУХАЯ - Lacoste, UPF 30 - Лакост</div>
+            </div> -->
+
+         </div>
+      </div>
+
    </div>
 </section>
 
@@ -844,7 +917,7 @@
                                                    <div
                                                    class="product-item__images-item product-item__images-swiper-slide swiper-slide">
                                                    <a href="#" class="product-item__images-link opacity-hover">
-                                                      <img src="image/product/product-02.jpg" alt=""
+                                                      <img src="image/product/product-07.jpg" alt=""
                                                          class="product-item__images-img">
                                                    </a>
                                              </div>
