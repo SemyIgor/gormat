@@ -1,12 +1,13 @@
 const productSlider = new Swiper(".product-slider__swiper", {
     loop: true,
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: ".product-slider__arrow-left",
-      prevEl: ".product-slider__arrow-right",
+        nextEl: ".product-slider__arrow-left",
+        prevEl: ".product-slider__arrow-right",
     },
-  
+    slideToClickedSlide: true,
+
     slidesPerView: 3,
     spaceBetween: 10,
     // breakpoints: {
@@ -21,4 +22,4 @@ const productSlider = new Swiper(".product-slider__swiper", {
     // },
     // autoHeight: true,
     speed: 600,
-  });
+});
