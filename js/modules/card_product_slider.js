@@ -8,18 +8,20 @@ const productSlider = new Swiper(".product-slider__swiper", {
     },
     slideToClickedSlide: true,
 
-    slidesPerView: 3,
-    spaceBetween: 10,
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 10,
-    //   },
-    //   500: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 15,
-    //   },
-    // },
     // autoHeight: true,
+    // slidesPerView: "auto",
+    slidesPerView: 3,
+    spaceBetween: 30,
+    watchOverflow: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            // spaceBetween: 10,
+        },
+        480: {
+            slidesPerView: 3,
+            // spaceBetween: 15,
+        },
+    },
     speed: 600,
 });
