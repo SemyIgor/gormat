@@ -41,7 +41,7 @@
 
     <script defer src="js/modules/card_product_tabs.js" type="text/javascript"></script>
     <script defer src="js/modules/product_counter.js" type="text/javascript"></script>
-    <script defer src="js/modules/card_product_slider_big.js" type="text/javascript"></script>
+    <!-- <script defer src="js/modules/card_product_slider_big.js" type="text/javascript"></script> -->
 
     <script defer src="js/main.js"></script>
     <!-- end js -->
@@ -629,6 +629,397 @@
 </div>
 <div class="backdrop-wall"></div>
 <!-- /mobile -->
+
+<div class="page-header__wrapper cart">
+    <h1 class="page-header page-header__container">Корзина</h1>
+</div>
+
+<section class="goods cart">
+    <div class="goods__container cart">
+
+        <main class="order-info">
+            <div class="goods">
+                <div class="order__title">
+                    <h3 class="order__title-text">Товары: <span>3</span> шт.</h3>
+                    <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
+                </div>
+
+                <div class="goods-items">
+
+                    <div class="goods-item">
+                        <div class="goods-item__img">
+                            <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
+                        </div>
+
+                        <div class="goods-item__info">
+                            <div class="category">Мужское теннисное поло</div>
+                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                красный/оранжевый</div>
+                            <div class="more-info">
+                                <span class="color">Цвет: <span>
+                                        <красный /span>
+                                    </span>
+                                    <span class="size">• Размер: <span>XL</span> </span>
+                            </div>
+                        </div>
+
+                        <div class="count-complete__unit">
+                            <div class="product-counter">
+                                <button class="product__btn--minus">
+                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                                </button>
+                                <input type="number" name="product-name" id="" class="product-number" value="1">
+                                <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                        alt="Plus"></button>
+                            </div>
+
+                            <div class="goods-item__price">21 745.00 руб.</div>
+
+                            <div class="goods-item__cart-img">
+                                <img src="image/cart/delete.svg" alt="Cart Delete">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="goods-item">
+                        <div class="goods-item__img">
+                            <img src="image/cart/goods_item_img-02.png" alt="Good's Image">
+                        </div>
+
+                        <div class="goods-item__info">
+                            <div class="category">Мужское теннисное поло</div>
+                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                красный/оранжевый</div>
+                            <div class="more-info">
+                                <span class="color">Цвет: <span>красный</span> </span>
+                                <span class="size">• Размер: <span>XL</span> </span>
+                            </div>
+                        </div>
+
+                        <div class="count-complete__unit">
+                            <div class="product-counter">
+                                <button class="product__btn--minus">
+                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                                </button>
+                                <input type="number" name="product-name" id="" class="product-number" value="1">
+                                <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                        alt="Plus"></button>
+                            </div>
+                            <div class="goods-item__price">210 745.00 руб.</div>
+
+                            <div class="goods-item__cart-img">
+                                <img src="image/cart/delete.svg" alt="Cart Delete">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="goods-item">
+                        <div class="goods-item__img">
+                            <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
+                        </div>
+
+                        <div class="goods-item__info">
+                            <div class="category">Мужское теннисное поло</div>
+                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                красный/оранжевый</div>
+                            <div class="more-info">
+                                <span class="color">Цвет: <span>красный</span> </span>
+                                <span class="size">• Размер: <span>XL</span> </span>
+                            </div>
+                        </div>
+
+                        <div class="count-complete__unit">
+                            <div class="product-counter">
+                                <button class="product__btn--minus">
+                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                                </button>
+                                <input type="number" name="product-name" id="" class="product-number" value="1">
+                                <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                        alt="Plus"></button>
+                            </div>
+                            <div class="goods-item__price">21 745.00 руб.</div>
+
+                            <div class="goods-item__cart-img">
+                                <img src="image/cart/delete.svg" alt="Cart Delete">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="delivery">
+                <div class="order__title">
+                    <h3 class="order__title-text">Способ получения:</h3>
+                    <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
+                </div>
+
+                <div class="delivery__list">
+                    <div class="delivery__item">
+                        <label>
+                            <input type="radio" name="filter--type" class="real-radio" value="Vilson">
+
+                            <span class="filter__custom-radio"></span>
+                            Самовывоз
+                        </label>
+                        <span class="delivery__price">0.00 руб.</span>
+                    </div>
+
+                    <div class="delivery__item">
+                        <label>
+                            <input type="radio" name="filter--type" class="real-radio" value="Lacoste">
+                            <span class="filter__custom-radio"></span>
+                            Курьер
+                        </label>
+                        <span class="delivery__price">1 100.00 руб.</span>
+                    </div>
+
+                    <div class="delivery__item">
+                        <label>
+                            <input type="radio" name="filter--type" class="real-radio" value="Nike">
+                            <span class="filter__custom-radio"></span>
+                            СДЭК
+                        </label>
+                        <span class="delivery__price">500.00 руб.</span>
+                    </div>
+
+                    <div class="delivery__item">
+                        <label>
+                            <input type="radio" name="filter--type" class="real-radio" value="Nike">
+                            <span class="filter__custom-radio"></span>
+                            Постамат
+                        </label>
+                        <span class="delivery__price">200.00 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment">
+                <div class="order__title">
+                    <h3 class="order__title-text">Способ оплаты:</h3>
+                    <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
+                </div>
+
+                <div class="payment__logos">
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <img src="image/cart/pay_pal_logo.png" alt="PayPal Logo" class="payment__logo custom-radio">
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <img src="image/cart/master_card_logo.png" alt="MasterCard Logo"
+                            class="payment__logo custom-radio">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/visa_logo.png" alt="Visa Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/pay_pal_logo.png"
+                                alt="PayPal Logo"></div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/master_card_logo.png"
+                                alt="MasterCard Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/visa_logo.png" alt="Visa Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/pay_pal_logo.png"
+                                alt="PayPal Logo"></div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/master_card_logo.png"
+                                alt="MasterCard Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/visa_logo.png" alt="Visa Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/pay_pal_logo.png"
+                                alt="PayPal Logo"></div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio">
+                            <img src="image/cart/master_card_logo.png" alt="MasterCard Logo">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/visa_logo.png" alt="Visa Logo">
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/pay_pal_logo.png"
+                                alt="PayPal Logo"></div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="product-size" class="real-radio" value="">
+                        <div class="payment__logo custom-radio"><img src="image/cart/master_card_logo.png"
+                                alt="MasterCard Logo">
+                        </div>
+                    </label>
+
+                </div>
+
+            </div>
+        </main>
+
+        <aside class="order-review">
+            <div class="order__title">
+                <h3 class="order__title-text">Информация о заказе:</h3>
+            </div>
+
+            <div class="order-calculation">
+
+                <div class="order-calculation__sum">
+                    <span>Сумма:</span><span>65 235.00 руб.</span>
+                </div>
+
+                <div class="order-calculation__delivery">
+                    <span>Доставка:</span><span>1 100.00 руб.</span>
+                </div>
+
+                <input type="text" class="order-calculation__discount-code" placeholder="Код скидки">
+
+                <div class="order-calculation__result">
+                    <span>Итого:</span><span>66 335.00 руб.</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="authentication">
+    <div class="authentication__container cart">
+
+        <div class="registration">
+
+            <div class="order__title registration__title">
+                <h3 class="order__title-text">Регистрация</h3>
+                <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
+            </div>
+
+            <div class="registration__tabs">
+                <label>
+                    <input type="radio" name="registration__subject" class="real-radio" value="Vilson">
+
+                    <span class="filter__custom-radio"></span>
+                    Физическое лицо
+                </label>
+
+                <label>
+                    <input type="radio" name="registration__subject" class="real-radio" value="Vilson">
+
+                    <span class="filter__custom-radio"></span>
+                    Юридическое лицо
+                </label>
+            </div>
+
+            <div class="registration__blanks">
+                <form action="#" class="registration__person">
+                    <div class="registration__requisites">
+
+                        <div class="requisites-item e-mail">
+                            <label for="#">E-mail<span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Адрес Вашей электронной почты"
+                                required />
+                        </div>
+
+                        <div class="requisites-item password">
+                            <label for="#">Пароль<span>*</span></label>
+                            <input type="password" id="password" name="password" placeholder="Придумайте пароль"
+                                required />
+                        </div>
+
+                        <div class="requisites-item pers-name">
+                            <label for="#">Имя<span>*</span></label>
+                            <input type="text" id="pers-name" name="pers-name" placeholder="Ваше имя" maxlength="8"
+                                minlength="2" required />
+                        </div>
+
+                        <div class="requisites-item surname">
+                            <label for="#">Фамилия*<span>*</span></label>
+                            <input type="text" id="surname" name="surname" placeholder="Ваша фамилия" maxlength="8"
+                                minlength="2" required />
+                        </div>
+
+                        <div class="requisites-item phone">
+                            <label for="#">Телефон<span>*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required />
+                        </div>
+                    </div>
+
+                    <div class="registration_address">
+
+                        <div class="order__title registration__title">
+                            <h3 class="order__title-text">Адрес доставки:</h3>
+                            <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
+                        </div>
+
+                        <div class="requisites-item country">
+                            <label for="country">Страна<span>*</span></label>
+                            <input type="text" id="country" name="country" placeholder="Название страны" required>
+                        </div>
+
+                        <div class="requisites-item city">
+                            <label for="city">Город<span>*</span></label>
+                            <input type="text" id="city" name="city" placeholder="Название города" required>
+                        </div>
+
+                        <div class="requisites-item address">
+                            <label for="address">Адрес<span>*</span></label>
+                            <input type="text" id="address" name="address" placeholder="Улица и номер дома, квартиры"
+                                required>
+                        </div>
+
+                        <div class="requisites-item zip">
+                            <label for="zip">Индекс<span>*</span></label>
+                            <input type="text" id="zip" name="zip" placeholder="Почтовый индекс" required>
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="registration__company"></div>
+            </div>
+
+        </div>
+
+        <div class="authorization"></div>
+    </div>
+</section>
 
 <!-- footer -->
 <footer class="footer">
