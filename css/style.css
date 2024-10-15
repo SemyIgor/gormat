@@ -1719,6 +1719,7 @@ $project-color: #8B4513; */
   }
   .authorization {
     width: 100%;
+    margin-bottom: 20px;
   }
   .authorization--submit {
     margin-bottom: 10px;
@@ -1738,23 +1739,15 @@ $project-color: #8B4513; */
   .cart.authentication__container {
     padding: 0 0;
   }
-  .order__title,
-  .order-review {
-    border-radius: 0 0 0 0;
-  }
+  /* .order-review, */
+  /*     .order__title {
+      border-radius: 0 0 0 0;
+  } */
+  /*     .delivery,
+  .payment,
+  .authorization,
+  .registration, */
   .goods > .order__title {
-    border-radius: 0;
-  }
-  .delivery {
-    border-radius: 0;
-  }
-  .payment {
-    border-radius: 0;
-  }
-  .authorization {
-    border-radius: 0;
-  }
-  .registration {
     border-radius: 0;
   }
   .cart .goods-item {
