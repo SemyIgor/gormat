@@ -1,28 +1,12 @@
 const productSlider = new Swiper(".product-slider__main-swiper", {
     loop: true,
 
-    // Navigation arrows
-    // navigation: {
-    //     nextEl: ".product-slider__arrow-left",
-    //     prevEl: ".product-slider__arrow-right",
-    // },
     slideToClickedSlide: true,
 
     autoHeight: false,
     // slidesPerView: "auto",
     slidesPerView: 1,
-    // spaceBetween: 30,
-    // watchOverflow: true,
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 2,
-    //         // spaceBetween: 10,
-    //     },
-    //     480: {
-    //         slidesPerView: 3,
-    //         // spaceBetween: 15,
-    //     },
-    // },
+
     speed: 600,
     thumbs: {
         swiper: {
@@ -38,7 +22,7 @@ const productSlider = new Swiper(".product-slider__main-swiper", {
 
             // autoHeight: true,
             // slidesPerView: "auto",
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 30,
             watchOverflow: true,
             breakpoints: {
@@ -54,4 +38,9 @@ const productSlider = new Swiper(".product-slider__main-swiper", {
             speed: 600,
         },
     },
+});
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    imageScale: true,
 });
