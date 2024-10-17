@@ -1,5 +1,5 @@
 const productSlider = new Swiper(".product-slider__main-swiper", {
-    loop: true,
+    loop: false,
 
     slideToClickedSlide: true,
 
@@ -38,9 +38,4 @@ const productSlider = new Swiper(".product-slider__main-swiper", {
             speed: 600,
         },
     },
-});
-
-Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-    imageScale: true,
 });
