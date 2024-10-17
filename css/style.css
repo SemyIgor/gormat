@@ -557,6 +557,7 @@ $project-color: #8B4513; */
   --font-size-16-11: 16px;
   --font-size-16-10: 16px;
   --font-size-16-10: 14px;
+  --font-size-14-10: 14px;
   /* Responsive */
 }
 @media (max-width: 1199px) {
@@ -671,6 +672,11 @@ $project-color: #8B4513; */
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
+.product-slider__slide {
+  border: 1px solid var(--color-gray-header-bg);
+  border-radius: var(--border-radius-6);
+  overflow: hidden;
+}
 .product-slider__slide.swiper-slide {
   width: 70px;
   display: -webkit-box;
@@ -683,6 +689,10 @@ $project-color: #8B4513; */
 .product-slider__slide.swiper-slide img {
   width: 70px;
   /* width: 100%; */
+}
+
+.swiper-slide-thumb-active {
+  border: 1px solid var(--color-red);
 }
 
 .product-info {
@@ -1283,60 +1293,32 @@ $project-color: #8B4513; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
-}
-.goods-item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.cart .goods-item__info .category {
-  font-size: var(--font-size-16-11);
-  font-weight: 500;
-  color: var(--color-gray-text);
-}
-
-.cart .goods-item__info .name {
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: var(--color-black-text);
-}
-
-.more-info span {
-  font-size: var(--font-size-14-10);
-}
-
-.color {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-gray-text);
-}
-
-.size {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-gray-text);
-}
-
-.count-complete__unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 10px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  /* gap: 10px; */
 }
-
-.goods-item .product-counter {
-  margin: 0;
+.goods-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .goods-item {
-  padding-right: 20px;
+  /* padding-right: 20px; */
+}
+.goods-item__price-and-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
 }
 .goods-item__price {
   font-size: var(--font-size-16-12);
@@ -1363,10 +1345,51 @@ $project-color: #8B4513; */
   height: 19px;
 }
 
+.cart .goods-item__info .category {
+  font-size: var(--font-size-16-11);
+  font-weight: 500;
+  color: var(--color-gray-text);
+}
+
+.cart .goods-item__info .name {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-black-text);
+}
+
+.more-info span {
+  font-size: var(--font-size-14-10);
+}
+
+.size {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-text);
+}
+
+.count-complete__unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.goods-item .product-counter {
+  margin: 0;
+  margin-left: 10px;
+}
+
 .order-review {
   border: 2px solid var(--color-gray-header-bg);
   border-radius: var(--border-radius-6);
-  width: 31.6%;
+  width: 30%;
 }
 
 .order-review .order__title-text {
@@ -1400,6 +1423,7 @@ $project-color: #8B4513; */
   margin-bottom: 15px;
 }
 .order-calculation__discount-code {
+  position: relative;
   width: 100%;
   font-size: 20px;
   padding-top: 4px;
@@ -1417,26 +1441,46 @@ $project-color: #8B4513; */
   align-items: baseline;
 }
 .order-calculation__discount-code::-webkit-input-placeholder {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 }
 .order-calculation__discount-code::-moz-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 }
 .order-calculation__discount-code:-ms-input-placeholder {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 }
 .order-calculation__discount-code::-ms-input-placeholder {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
 }
 .order-calculation__discount-code::placeholder {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 16px;
   font-weight: 400;
   color: var(--color-gray-text);
