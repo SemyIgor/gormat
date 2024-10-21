@@ -17,17 +17,25 @@ const priceMinusBtn = document.querySelector(
 const pricePlusBtn = document.querySelector(
     ".product-counter .product__btn--plus"
 );
+
 const priceInput = document.querySelector(".product-counter .product-number");
 
 // Получаем кнопки и инпуты в блоках счётчиков, не имеющих дубляжа на странице
 // Дубляж - это когда счётчик при изменении ширины экрана исчезает в одной
 // точке DOM и возникает в другой точке DOM (как на стр. card_product.html)
-const priceMinusBtns = document.querySelectorAll(
+
+/* const priceMinusBtns = document.querySelectorAll(
     ".product-counter .product__btn--minus"
-);
-const pricePlusBtns = document.querySelectorAll(
+); */
+
+const priceMinusBtns = document.querySelectorAll(".product__btn--minus");
+
+/* const pricePlusBtns = document.querySelectorAll(
     ".product-counter .product__btn--plus"
-);
+); */
+
+const pricePlusBtns = document.querySelectorAll(".product__btn--plus");
+
 const priceInputs = document.querySelectorAll(
     ".product-counter .product-number"
 );

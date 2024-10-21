@@ -1,4 +1,4 @@
-const registrationTabs = document.querySelectorAll(".registration__tab");
+const registrationTabs = document.querySelectorAll(".cart .registration__tab");
 
 const registrationTabsLength = registrationTabs.length;
 
@@ -12,7 +12,7 @@ if (registrationTabsLength > 0) {
 
 function changeTab() {
     const forms = document.querySelectorAll(
-        ".registration__form, .cart.authorization__form"
+        ".cart .registration__form, .cart.authorization__form"
     );
 
     if (forms.length == registrationTabsLength * 2) {

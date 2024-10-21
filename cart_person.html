@@ -51,6 +51,7 @@
     <script defer src="js/modules/authorization__pop-up-form.js" type="text/javascript"></script>
     <script defer src="js/modules/registration__pop-up-form.js" type="text/javascript"></script>
     <script defer src="js/modules/cart_tabs_pop-up.js" type="text/javascript"></script>
+    <script defer src="js/modules/add_to_cart.js" type="text/javascript"></script>
     <script defer src="js/main.js"></script>
     <!-- end js -->
 </head>
@@ -146,7 +147,7 @@
 
                                         <div class="authorization__pop-up-form" style="display: none;"
                                             id="authorization__pop-up-form">
-                                            <div class="order__title registration__title pop-up">
+                                            <div class="order__title registration__title authorization__title pop-up">
                                                 <h3 class="order__title-text">Авторизоваться</h3>
                                             </div>
 
@@ -159,6 +160,7 @@
                                                 </div>
 
                                                 <div class="requisites-item password">
+                                                    <!-- <div class="authorization-item password"> -->
                                                     <label for="#">Пароль<span>*</span></label>
                                                     <input type="password" name="" placeholder="Введите Ваш пароль"
                                                         required />
@@ -177,7 +179,7 @@
 
                                         <div class="registration__pop-up-form" style="display: none;"
                                             id="registration__pop-up-form">
-                                            <div class="order__title registration__title">
+                                            <div class="order__title registration__title pop-up">
                                                 <h3 class="order__title-text">Регистрация</h3>
                                                 <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow"
                                                     class="order__title-image">
@@ -210,7 +212,7 @@
 
                                                 <form action="#" class="registration__form pop-up person"
                                                     data-client="person">
-                                                    <div class="registration__requisites">
+                                                    <div class="registration__requisites pop-up">
 
                                                         <div class="requisites-item e-mail">
                                                             <label for="#">E-mail<span>*</span></label>
@@ -250,7 +252,7 @@
                                                             class="order__title-image">
                                                     </div>
 
-                                                    <div class="registration__address">
+                                                    <div class="registration__address pop-up">
 
                                                         <div class="requisites-item country">
                                                             <label for="country">Страна<span>*</span></label>
@@ -286,7 +288,7 @@
 
                                                 <form action="#" class="registration__form pop-up company info--hidden"
                                                     data-client="company">
-                                                    <div class="registration__requisites">
+                                                    <div class="registration__requisites pop-up company">
 
                                                         <div class="requisites-item e-mail">
                                                             <label for="#">E-mail<span>*</span></label>
@@ -331,12 +333,12 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="registration__nds-checkbox">
+                                                    <div class="registration__nds-checkbox pop-up">
                                                         <label>
                                                             <input type="radio" name="nds-checkbox" class="real-radio"
                                                                 value="">
 
-                                                            <span class="filter__custom-radio"></span>
+                                                            <span class="filter__custom-radio pop-up"></span>
                                                             Я хочу получить счёт-фактуру НДС
                                                         </label>
                                                     </div>
@@ -348,7 +350,7 @@
                                                             class="order__title-image">
                                                     </div>
 
-                                                    <div class="registration__address">
+                                                    <div class="registration__address pop-up">
 
                                                         <div class="requisites-item country">
                                                             <label for="country">Страна<span>*</span></label>
@@ -383,7 +385,7 @@
                                                             class="order__title-image">
                                                     </div>
 
-                                                    <div class="registration__address">
+                                                    <div class="registration__address pop-up legal">
 
                                                         <div class="requisites-item country">
                                                             <label for="country">Страна<span>*</span></label>
@@ -414,7 +416,7 @@
                                                                 <input type="radio" name="address-checkbox"
                                                                     class="real-radio" value="">
 
-                                                                <span class="filter__custom-radio"></span>
+                                                                <span class="filter__custom-radio pop-up"></span>
                                                                 Юридический адрес совпадает с адресом доставки
                                                             </label>
                                                         </div>
@@ -934,7 +936,6 @@
 
                 <div class="goods-items">
 
-
                     <div class="goods-item">
                         <div class="goods-item__img">
                             <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
@@ -1409,7 +1410,7 @@
                         <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
                     </div>
 
-                    <div class="registration__address">
+                    <div class="registration__address legal">
 
                         <div class="requisites-item country">
                             <label for="country">Страна<span>*</span></label>
