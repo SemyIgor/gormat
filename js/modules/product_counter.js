@@ -24,17 +24,13 @@ const priceInput = document.querySelector(".product-counter .product-number");
 // Дубляж - это когда счётчик при изменении ширины экрана исчезает в одной
 // точке DOM и возникает в другой точке DOM (как на стр. card_product.html)
 
-/* const priceMinusBtns = document.querySelectorAll(
+const priceMinusBtns = document.querySelectorAll(
     ".product-counter .product__btn--minus"
-); */
+);
 
-const priceMinusBtns = document.querySelectorAll(".product__btn--minus");
-
-/* const pricePlusBtns = document.querySelectorAll(
+const pricePlusBtns = document.querySelectorAll(
     ".product-counter .product__btn--plus"
-); */
-
-const pricePlusBtns = document.querySelectorAll(".product__btn--plus");
+);
 
 const priceInputs = document.querySelectorAll(
     ".product-counter .product-number"
@@ -72,6 +68,7 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
     // Кнопки минус
     priceMinusBtns.forEach((priceMinusBtn) => {
         priceMinusBtn.addEventListener("click", (event) => {
+            console.log("Минус");
             let clickedMinusNumber =
                 event.target.parentElement.parentElement.querySelector(
                     ".product-number"
@@ -94,3 +91,21 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
         });
     });
 }
+
+// Находим общий блок
+const productButtonsPopUp = document.querySelector(".product-buttons.pop-up");
+console.log("productButtonsPopUp: ", productButtonsPopUp);
+
+// Навешиваем на него слушатель
+// productButtonsPopUp.addEventListener("click", () => {
+//     console.log("Кликнули");
+//     const addToCartPopUp = productButtonsPopUp.querySelector(
+//         ".add-to-cart.pop-up"
+//     );
+//     console.log("addToCartPopUp: ", addToCartPopUp);
+
+//     // const minusBtns = addToCartPopUp.querySelectorAll(
+//     //     ".goods-items.pop-up .product__btn--minus"
+//     // );
+//     // console.log("minusBtns: ", minusBtns.length);
+// });
