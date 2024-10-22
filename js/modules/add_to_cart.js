@@ -1,6 +1,5 @@
 const addToCartBtn = document.getElementById("add-to-cart__btn");
 let testVar = 0;
-console.log("testVar: ", testVar);
 
 if (addToCartBtn) {
     document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +36,6 @@ if (addToCartBtn) {
                 ]);
 
                 testVar++;
-                console.log("testVar: ", testVar);
                 const plusBtns = document.querySelectorAll(
                     ".goods.pop-up .product__btn--plus"
                 );
