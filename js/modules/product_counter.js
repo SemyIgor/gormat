@@ -36,6 +36,9 @@ const priceInputs = document.querySelectorAll(
     ".product-counter .product-number"
 );
 
+const uMinusBtns = document.querySelectorAll(".u-product__btn--minus");
+const uPlusBtns = document.querySelectorAll(".u-product__btn--plus");
+
 // Если счётчик имеет дубль в другой точке страницы:
 if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
     // Добавляем обработчики событий в блоке product-buttons:
@@ -90,22 +93,31 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
             clickedPlusNumber.value = parseInt(clickedPlusNumber.value) + 1;
         });
     });
+} else if (uMinusBtns && uPlusBtns) {
+    // Для страницы favorites.html
+    // Добавляем обработчики событий в блоках счётчиков
+    // Кнопки минус
+    uMinusBtns.forEach((uMinusBtn) => {
+        uMinusBtn.addEventListener("click", (event) => {
+            let counterNumber =
+                event.target.parentElement.parentElement.querySelector(
+                    ".u-product-number"
+                );
+            counterNumber.value = Math.max(
+                1,
+                parseInt(counterNumber.value) - 1
+            );
+        });
+    });
+
+    // Кнопки плюс
+    uPlusBtns.forEach((uPlusBtn) => {
+        uPlusBtn.addEventListener("click", (event) => {
+            let counterNumber =
+                event.target.parentElement.parentElement.querySelector(
+                    ".u-product-number"
+                );
+            counterNumber.value = parseInt(counterNumber.value) + 1;
+        });
+    });
 }
-
-// Находим общий блок
-const productButtonsPopUp = document.querySelector(".product-buttons.pop-up");
-console.log("productButtonsPopUp: ", productButtonsPopUp);
-
-// Навешиваем на него слушатель
-// productButtonsPopUp.addEventListener("click", () => {
-//     console.log("Кликнули");
-//     const addToCartPopUp = productButtonsPopUp.querySelector(
-//         ".add-to-cart.pop-up"
-//     );
-//     console.log("addToCartPopUp: ", addToCartPopUp);
-
-//     // const minusBtns = addToCartPopUp.querySelectorAll(
-//     //     ".goods-items.pop-up .product__btn--minus"
-//     // );
-//     // console.log("minusBtns: ", minusBtns.length);
-// });
