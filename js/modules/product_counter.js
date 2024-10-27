@@ -1,45 +1,41 @@
-// Получаем кнопки и инпут в блоке product-buttons
-const productMinusBtn = document.querySelector(
-    ".product-buttons .product__btn--minus"
-);
-
-const productPlusBtn = document.querySelector(
-    ".product-buttons .product__btn--plus"
-);
-
-const productInput = document.querySelector(".product-buttons .product-number");
-
-// Получаем кнопки и инпут в блоке price-and-counter
-const priceMinusBtn = document.querySelector(
-    ".product-counter .product__btn--minus"
-);
-
-const pricePlusBtn = document.querySelector(
-    ".product-counter .product__btn--plus"
-);
-
-const priceInput = document.querySelector(".product-counter .product-number");
-
-// Получаем кнопки и инпуты в блоках счётчиков, не имеющих дубляжа на странице
+// Получаем кнопки и инпуты в блоках счётчиков, имеющих дубляж на странице
 // Дубляж - это когда счётчик при изменении ширины экрана исчезает в одной
 // точке DOM и возникает в другой точке DOM (как на стр. card_product.html)
 
-const priceMinusBtns = document.querySelectorAll(
-    ".product-counter .product__btn--minus"
+// === Для страницы card_product.html ==============
+const productMinusBtn = document.querySelector(
+    ".product-buttons .product__btn--minus"
 );
-
-const pricePlusBtns = document.querySelectorAll(
-    ".product-counter .product__btn--plus"
+const productPlusBtn = document.querySelector(
+    ".product-buttons .product__btn--plus"
 );
-
-const priceInputs = document.querySelectorAll(
-    ".product-counter .product-number"
+const productInput = document.querySelector(".product-buttons .product-number");
+// Получаем кнопки и инпут в блоке price-and-counter
+const priceMinusBtn = document.querySelector(
+    ".product-card .product-counter .product__btn--minus"
 );
+const pricePlusBtn = document.querySelector(
+    ".product-card .product-counter .product__btn--plus"
+);
+const priceInput = document.querySelector(".product-counter .product-number");
+// --- / Для страницы card_product.html ----------------
 
+// Получаем кнопки и инпуты в блоках счётчиков, не имеющих дубляжа на странице
+// === Для КОРЗИНЫ ==============================
+const cartMinusBtns = document.querySelectorAll(
+    ".cart .product-counter .product__btn--minus"
+);
+const cartPlusBtns = document.querySelectorAll(
+    ".cart .product-counter .product__btn--plus"
+);
+// --- / Для КОРЗИНЫ ----------------------------
+
+// === Для блока ИЗБРАННОЕ ===========================================
 const uMinusBtns = document.querySelectorAll(".u-product__btn--minus");
 const uPlusBtns = document.querySelectorAll(".u-product__btn--plus");
+// --- / Для блока ИЗБРАННОЕ -----------------------------------------
 
-// Если счётчик имеет дубль в другой точке страницы:
+// Если счётчик имеет дубль в другой точке страницы для card_product.html:
 if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
     // Добавляем обработчики событий в блоке product-buttons:
     // Кнопка минус
@@ -66,12 +62,13 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
         priceInput.value = parseInt(priceInput.value) + 1;
         productInput.value = priceInput.value;
     });
-} else if (priceMinusBtn && pricePlusBtn) {
+}
+// === Для корзины (cart_person.html) ============================
+if (cartMinusBtns.length > 0 && cartPlusBtns.length > 0) {
     // Добавляем обработчики событий в блоках счётчиков
     // Кнопки минус
-    priceMinusBtns.forEach((priceMinusBtn) => {
-        priceMinusBtn.addEventListener("click", (event) => {
-            console.log("Минус");
+    cartMinusBtns.forEach((cartMinusBtn) => {
+        cartMinusBtn.addEventListener("click", (event) => {
             let clickedMinusNumber =
                 event.target.parentElement.parentElement.querySelector(
                     ".product-number"
@@ -84,8 +81,8 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
     });
 
     // Кнопки плюс
-    pricePlusBtns.forEach((pricePlusBtn) => {
-        pricePlusBtn.addEventListener("click", (event) => {
+    cartPlusBtns.forEach((cartPlusBtn) => {
+        cartPlusBtn.addEventListener("click", (event) => {
             let clickedPlusNumber =
                 event.target.parentElement.parentElement.querySelector(
                     ".product-number"
@@ -93,7 +90,11 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
             clickedPlusNumber.value = parseInt(clickedPlusNumber.value) + 1;
         });
     });
-} else if (uMinusBtns && uPlusBtns) {
+}
+// --- / Для корзины (cart_person.html) ----------------------------
+
+// === Для favorites.html =======================================
+if (uMinusBtns.length > 0 && uPlusBtns.length > 0) {
     // Для страницы favorites.html
     // Добавляем обработчики событий в блоках счётчиков
     // Кнопки минус
@@ -121,3 +122,4 @@ if (productMinusBtn && productPlusBtn && priceMinusBtn && pricePlusBtn) {
         });
     });
 }
+// --- / Для favorites.html -------------------------------------------

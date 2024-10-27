@@ -935,13 +935,12 @@
 
             <button class="red-btn__white-cart">
                 <img src="image/card_product/cart_white.svg" alt="Cart White">
-                <span>&nbsp;Добавить всё в корзину</span>
+                <span>Добавить всё в корзину</span>
             </button>
         </div>
 
         <div class="order__title">
             <h3 class="order__title-text">Товары: <span>3</span> шт.</h3>
-            <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow" class="order__title-image">
         </div>
 
         <div class="u-goods u-pop-up">
@@ -988,9 +987,9 @@
                     <div class="u-product-item__price-sale-percent">Скидка 10%</div>
                 </div>
 
-                <button class="white-cart__red-btn">
+                <button class="open-pop-up--btn white-cart__red-btn" data-src="#add-to-cart">
     <img src="image/card_product/cart_white.svg" alt="Cart White">
-    <span>&nbsp;В корзину</span>
+    <span>В корзину</span>
 </button>
 
                 <button class="u-goods-item__cart-img">
@@ -1039,9 +1038,9 @@
                     <div class="u-product-item__price-sale-percent">Скидка 10%</div>
                 </div>
 
-                <button class="white-cart__red-btn">
+                <button class="open-pop-up--btn white-cart__red-btn" data-src="#add-to-cart">
     <img src="image/card_product/cart_white.svg" alt="Cart White">
-    <span>&nbsp;В корзину</span>
+    <span>В корзину</span>
 </button>
 
                 <button class="u-goods-item__cart-img">
@@ -1090,9 +1089,9 @@
                     <div class="u-product-item__price-sale-percent">Скидка 10%</div>
                 </div>
 
-                <button class="white-cart__red-btn">
+                <button class="open-pop-up--btn white-cart__red-btn" data-src="#add-to-cart">
     <img src="image/card_product/cart_white.svg" alt="Cart White">
-    <span>&nbsp;В корзину</span>
+    <span>В корзину</span>
 </button>
 
                 <button class="u-goods-item__cart-img">
@@ -1109,6 +1108,161 @@
 
     </div>
 </section>
+
+<!-- === pop-up ========== -->
+<div style="display: none;">
+    <div id="add-to-cart" class="add-to-cart pop-up">
+
+        <div class="add-to-cart__title">
+            <img src="image/card_product/check_mark.svg" alt="Check Mark">
+            <span>Товар добавлен в корзину</span>
+        </div>
+
+        <div class="goods pop-up">
+
+    <div class="goods-items pop-up">
+
+        <div class="goods-item">
+            <div class="goods-item__img">
+                <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
+            </div>
+
+            <div class="goods-item__info-txt">
+                <div class="goods-item__info">
+                    <div class="category">Мужское теннисное поло</div>
+                    <div class="name">
+                        <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                            красный/оранжевый</p>
+                    </div>
+                    <div class="more-info">
+                        <span class="color">Цвет: <span>
+                                <красный /span>
+                            </span>
+                            <span class="size">• Размер: <span>XL</span> </span>
+                    </div>
+                </div>
+
+
+                <div class="goods-item__money-block">
+
+                    <div class="product-counter">
+                        <button class="product__btn--minus">
+                            <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                        </button>
+                        <input type="number" name="product1-name" class="product-number" value="1">
+                        <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                alt="Plus"></button>
+                    </div>
+
+                    <div class="goods-item__price-and-cart">
+                        <div class="goods-item__price">21 745.00 руб.</div>
+
+                        <button class="goods-item__cart-img">
+                            <img src="image/cart/delete.svg" alt="Cart Delete">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="goods-item">
+            <div class="goods-item__img">
+                <img src="image/cart/goods_item_img-02.png" alt="Good's Image">
+            </div>
+
+            <div class="goods-item__info-txt">
+                <div class="goods-item__info">
+                    <div class="category">Мужское теннисное поло</div>
+                    <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                        красный/оранжевый</div>
+                    <div class="more-info">
+                        <span class="color">Цвет: <span>красный</span> </span>
+                        <span class="size">• Размер: <span>XL</span> </span>
+                    </div>
+                </div>
+
+                <div class="goods-item__money-block">
+                    <div class="product-counter">
+                        <button class="product__btn--minus">
+                            <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                        </button>
+                        <input type="number" name="product2-name" class="product-number" value="1">
+                        <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                alt="Plus"></button>
+                    </div>
+
+                    <div class="goods-item__price-and-cart">
+                        <div class="goods-item__price">210 745.00 руб.</div>
+
+                        <button class="goods-item__cart-img">
+                            <img src="image/cart/delete.svg" alt="Cart Delete">
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="goods-item">
+            <div class="goods-item__img">
+                <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
+            </div>
+
+            <div class="goods-item__info-txt">
+                <div class="goods-item__info">
+                    <div class="category">Мужское теннисное поло</div>
+                    <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                        красный/оранжевый</div>
+                    <div class="more-info">
+                        <span class="color">Цвет: <span>красный</span> </span>
+                        <span class="size">• Размер: <span>XL</span> </span>
+                    </div>
+                </div>
+
+                <div class="goods-item__money-block">
+                    <div class="product-counter">
+                        <button class="product__btn--minus">
+                            <img src="image/card_product/product_btn_minus.svg" alt="Minus">
+                        </button>
+                        <input type="number" name="product3-name" class="product-number" value="1">
+                        <button class="product__btn--plus"><img src="image/card_product/product_btn_plus.svg"
+                                alt="Plus"></button>
+                    </div>
+
+                    <div class="goods-item__price-and-cart">
+                        <div class="goods-item__price">21 745.00 руб.</div>
+
+                        <button class="goods-item__cart-img">
+                            <img src="image/cart/delete.svg" alt="Cart Delete">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        <div class="add-to-cart__result-price">
+            <span>Итого:</span>
+            <span>65 235.00 руб.</span>
+        </div>
+
+        <div class="product-buttons pop-up">
+
+            <button id="add-to-cart__btn" class="red-btn__white-cart">
+                <span>Перейти к оформлению</span>
+            </button>
+
+            <a href="#" class="white-btn">Продолжить покупки</a>
+        </div>
+
+    </div>
+
+</div>
+<!-- /--- pop-up -------------- -->
 
 
 <!-- footer -->

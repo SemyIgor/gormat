@@ -1,25 +1,22 @@
-const addToCartBtn = document.getElementById("add-to-cart__btn");
 let testVar = 0;
+console.log("testVar: ", testVar);
+// Changes mark !!!
+document.addEventListener("DOMContentLoaded", () => {
+    // const addToCartBtn = document.getElementById("add-to-cart__btn");
+    const addToCartBtns = document.querySelectorAll(".open-pop-up--btn");
 
-if (addToCartBtn) {
-    document.addEventListener("DOMContentLoaded", () => {
-        document
-            .getElementById("add-to-cart__btn")
-            .addEventListener("click", function () {
+    if (addToCartBtns.length > 0) {
+        console.log("addToCartBtns.length: ", addToCartBtns.length);
+        addToCartBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+                const src = this.getAttribute("data-src");
                 Fancybox.show([
                     {
-                        src: "#add-to-cart",
+                        src: src,
                         type: "inline",
                         opts: {
                             Thumbs: {
                                 autoStart: false,
-                            },
-                            Toolbar: {
-                                display: {
-                                    left: [],
-                                    middle: [],
-                                    right: [],
-                                },
                             },
                             Carousel: {
                                 Friction: 0.8,
@@ -36,6 +33,7 @@ if (addToCartBtn) {
                 ]);
 
                 testVar++;
+
                 const plusBtns = document.querySelectorAll(
                     ".goods.pop-up .product__btn--plus"
                 );
@@ -62,19 +60,8 @@ if (addToCartBtn) {
                     clickedPlusNumber.value =
                         parseInt(clickedPlusNumber.value) + 1;
                 }
-                /*
-                // // Удаляем обработчики событий в блоках счётчиков
-                // // Кнопки минус
-                // minusBtns.forEach((minusBtn) => {
-                //     minusBtn.removeEventListener("click", minusCounter);
-                // });
 
-                // // Кнопки плюс
-                // plusBtns.forEach((plusBtn) => {
-                //     plusBtn.removeEventListener("click", plusCounter);
-                // });
-                */
-
+                console.log("testVar: ", testVar);
                 if (testVar == 1) {
                     // Добавляем обработчики событий в блоках счётчиков
                     // Кнопки минус
@@ -88,8 +75,11 @@ if (addToCartBtn) {
                     });
                 }
             });
-    });
-}
+        });
+    } else {
+        console.log("Not found !");
+    }
+});
 
 // document
 //     .querySelector("#add-to-cart, pop-up")
