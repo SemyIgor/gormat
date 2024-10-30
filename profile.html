@@ -52,6 +52,7 @@
     <script defer src="js/modules/registration__pop-up-form.js" type="text/javascript"></script>
     <script defer src="js/modules/cart_tabs_pop-up.js" type="text/javascript"></script>
     <script defer src="js/modules/add_to_cart.js" type="text/javascript"></script>
+    <script defer src="js/modules/profile.js" type="text/javascript"></script>
     <script defer src="js/modules/replaceSVGImages.js" type="text/javascript"></script>
     <script defer src="js/main.js"></script>
     <!-- end js -->
@@ -1001,6 +1002,7 @@
 
         <main class="profile-main">
 
+            <!-- Личный профиль -->
             <div class="profile-main__personal-data display--none" data-menu="profile-person">
                 <div class="profile-main__personal-data--module">
                     <div class="profile-menu__title">
@@ -1094,7 +1096,8 @@
                 </div>
             </div>
 
-            <div class="profile-main__company-data " data-menu="profile-company">
+            <!-- Профиль компании -->
+            <div class="profile-main__company-data display--none" data-menu="profile-company">
 
                 <!-- Мои данные -->
                 <div class="profile-main__personal-data--module">
@@ -1264,11 +1267,10 @@
                             </label>
                         </div>
 
-                        <div class="registration__requisites">
+                        <div class="registration__requisites grid-btn">
                             <div class="registration--submit person">
                                 <input type="submit" value="Подтвердить изменения">
                             </div>
-
                         </div>
                     </form>
                 </div>
@@ -1318,36 +1320,345 @@
                                 <input type="checkbox" name="address-checkbox" class="real-radio" value="">
 
                                 <span class="filter__custom-radio"></span>
-                                Юридический адрес совпадает с адресом доставки по умолчанию
+                                <span>
+                                    Юридический адрес совпадает с адресом доставки по умолчанию
+
+                                </span>
                             </label>
                         </div>
 
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit person">
+                                <input type="submit" value="Подтвердить изменения">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Адреса доставки -->
+            <div class="profile-main__delivery-address" data-menu="delivery-address">
+                <!-- Адрес доставки по умолчанию -->
+                <div class="profile-main__address--module default-address">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text font-size-20-16">Адрес доставки по умолчанию</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="registration__requisites no-edit">
+
+                        <div class="requisites-item country">
+                            <label for="country">Страна</label>
+                            <input type="text" name="" placeholder="Беларусь" disabled>
+                        </div>
+
+                        <div class="requisites-item city">
+                            <label for="city">Город</label>
+                            <input type="text" name="" placeholder="Минск" disabled>
+                        </div>
+
+                        <div class="requisites-item address">
+                            <label for="address">Адрес</label>
+                            <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                        </div>
+
+                        <div class="requisites-item zip">
+                            <label for="zip">Индекс</label>
+                            <input type="text" name="" placeholder="220 004" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="registration__requisites grid-btn">
+                        <div class="registration--submit person">
+                            <input type="submit" value="Редактировать даннные">
+                        </div>
+                    </div>
+
+                    <div class="registration__requisites grid-btn display--none">
                         <div class="registration--submit person">
                             <input type="submit" value="Подтвердить изменения">
                         </div>
-
-
-                    </form>
+                    </div>
 
                 </div>
 
+                <!-- Дополнительный адрес №1 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                1
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small">Доп. адрес №<span>
+                                1
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="content-block display--none">
+                        <div class="registration__requisites no-edit">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" disabled>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" disabled>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+
+                            <div class="registration--submit set-default-address-btn">
+                                <a href="#" class="white-btn">Назначить по умолчанию</a>
+                            </div>
+
+                            <div class="registration--submit edit-address-btn person">
+                                <input type="submit" value="Редактировать даннные">
+                            </div>
+
+                            <div class="registration__requisites confirm-address-btn grid-btn display--none">
+                                <div class="registration--submit person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дополнительный адрес №2 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title">
+
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                2
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small display--flex">Доп. адрес №<span>
+                                2
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="content-block display--none">
+                        <div class="registration__requisites no-edit">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" disabled>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" disabled>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit set-default-address-btn">
+                                <a href="#" class="white-btn">Назначить по умолчанию</a>
+                            </div>
+
+                            <div class="registration--submit edit-address-btn person">
+                                <input type="submit" value="Редактировать даннные">
+                            </div>
+
+                            <div class="registration__requisites confirm-address-btn grid-btn display--none">
+                                <div class="registration--submit person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Дополнительный адрес №3 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                3
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small">Доп. адрес №<span>
+                                3
+                            </span>
+                            <img src="image/profile/delete.svg" alt="Delete">
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img  display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <div class="registration__requisites no-edit">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" disabled>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" disabled>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit set-default-address-btn">
+                                <a href="#" class="white-btn">Назначить по умолчанию</a>
+                            </div>
+
+                            <div class="registration--submit edit-address-btn person">
+                                <input type="submit" value="Редактировать даннные">
+                            </div>
+
+                            <div class="registration__requisites confirm-address-btn grid-btn display--none">
+                                <div class="registration--submit person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Новый дополнительный адрес -->
+                <div class="profile-main__address--module new-address">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text font-size-20-16 display--flex">
+                            Новый дополнительный адрес
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="registration__requisites no-edit">
+
+                        <div class="requisites-item country">
+                            <label for="country">Страна</label>
+                            <input type="text" name="" placeholder="Беларусь" disabled>
+                        </div>
+
+                        <div class="requisites-item city">
+                            <label for="city">Город</label>
+                            <input type="text" name="" placeholder="Минск" disabled>
+                        </div>
+
+                        <div class="requisites-item address">
+                            <label for="address">Адрес</label>
+                            <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                        </div>
+
+                        <div class="requisites-item zip">
+                            <label for="zip">Индекс</label>
+                            <input type="text" name="" placeholder="220 004" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="registration__requisites grid-btn">
+                        <div class="registration--submit person">
+                            <input type="submit" value="Добавить новый адрес">
+                        </div>
+                    </div>
+
+                    <!-- <div class="registration__requisites grid-btn display--none">
+                        <div class="registration--submit person">
+                            <input type="submit" value="Подтвердить изменения">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="profile-main__payment-type">
 
             </div>
-    </div>
 
-    <div class="profile-main__delivery-address">
+            <div class="profile-main__orders">
 
-    </div>
+            </div>
 
-    <div class="profile-main__payment-type">
-
-    </div>
-
-    <div class="profile-main__orders">
-
-    </div>
-
-    </main>
+        </main>
     </div>
 </section>
 

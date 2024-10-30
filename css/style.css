@@ -553,6 +553,7 @@ $project-color: #8B4513; */
   --color-gray-menu: #CFD1D5;
   --color-gray-text: #929292;
   --color-gray-header-bg: #E6E6E7;
+  --color-grey-form-bg: #F7F7F8;
   --color-black-text: #1E1D21;
   --color-black-header-bg: #1E1D21;
   --color-black-footer: #1E1D21;
@@ -572,6 +573,7 @@ $project-color: #8B4513; */
   --border-radius-6: 6px;
   --font-size-48-20: 48px;
   --font-size-36-18: 36px;
+  --font-size-20-16: 20px;
   --font-size-16-14: 16px;
   --font-size-16-12: 16px;
   --font-size-16-11: 16px;
@@ -590,6 +592,7 @@ $project-color: #8B4513; */
     --margin-100-40: calc(40px + (100 - 40) * ((100vw - 320px) / (1199 - 320)));
     --font-size-48-20: calc(20px + (48 - 20) * ((100vw - 320px) / (1199 - 320)));
     --font-size-36-18: calc(18px + (36 - 18) * ((100vw - 320px) / (1199 - 320)));
+    --font-size-20-16: calc(16px + (20 - 16) * ((100vw - 320px) / (1199 - 320)));
     --font-size-16-14: calc(14px + (16 - 14) * ((100vw - 320px) / (1199 - 320)));
     --font-size-16-12: calc(12px + (16 - 12) * ((100vw - 320px) / (1199 - 320)));
     --font-size-16-11: calc(11px + (16 - 11) * ((100vw - 320px) / (1199 - 320)));
@@ -4863,7 +4866,8 @@ body.backdrop .backdrop-wall {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 10px;
+  /*  */
   width: 100%;
   height: 40px;
   text-align: start;
@@ -4898,52 +4902,191 @@ body.backdrop .backdrop-wall {
   background-color: rgba(207, 209, 213, 0.3);
 }
 
-.profile-main {
-  margin-bottom: 40px;
+.profile .display--none {
+  display: none;
+}
+.profile .display--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.profile .profile-main {
+  margin-bottom: var(--margin-100-50);
   /*     border: 2px solid var(--color-gray-header-bg);
   border-radius: calc(var(--border-radius-6) + 2px); */
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  /*         &__address--module.additional-address {
+      margin-bottom: 0;
+
+      & img {
+          margin-left: 30px;
+      }
+
+      & h3 {
+          display: inline-flex;
+          justify-content: space-between;
+          width: 334px;
+      }
+
+      & .legal-addr-small {
+          display: none;
+      }
+  } */
 }
-.profile-main__personal-data--module, .profile-main__address--module {
+.profile .profile-main__personal-data--module, .profile .profile-main__address--module {
   border: 2px solid var(--color-gray-header-bg);
   border-radius: calc(var(--border-radius-6) + 2px);
   overflow: hidden;
   margin-bottom: 30px;
 }
-.profile-main .registration__requisites {
+.profile .profile-main .registration__nds-checkbox {
   margin-bottom: 30px;
 }
-.profile-main .registration__requisites.no-edit input::-webkit-input-placeholder {
+.profile .profile-main .registration__nds-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   color: var(--color-black-text);
 }
-.profile-main .registration__requisites.no-edit input::-moz-placeholder {
-  color: var(--color-black-text);
-}
-.profile-main .registration__requisites.no-edit input:-ms-input-placeholder {
-  color: var(--color-black-text);
-}
-.profile-main .registration__requisites.no-edit input::-ms-input-placeholder {
-  color: var(--color-black-text);
-}
-.profile-main .registration__requisites.no-edit input::placeholder {
-  color: var(--color-black-text);
-}
-.profile-main .registration__requisites.no-edit input:disabled {
-  background-color: white;
-}
-.profile-main .registration__nds-checkbox label {
-  color: var(--color-black-text);
-}
-.profile-main .registration__nds-checkbox {
-  margin-bottom: 30px;
-}
-.profile-main .registration__address-checkbox {
+.profile .profile-main .registration__address-checkbox {
   grid-column: 1/span 2;
 }
-.profile-main .registration__address-checkbox label {
+.profile .profile-main .registration__address-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   color: var(--color-black-text);
+}
+.profile .profile-main .registration__nds-checkbox .filter__custom-radio, .profile .profile-main .registration__address-checkbox .filter__custom-radio {
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 7px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.profile .profile-main .registration__nds-checkbox label, .profile .profile-main .registration__address-checkbox label {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.profile .registration__requisites {
+  margin-bottom: 30px;
+}
+.profile .registration__requisites.no-edit input::-webkit-input-placeholder {
+  color: var(--color-black-text);
+}
+.profile .registration__requisites.no-edit input::-moz-placeholder {
+  color: var(--color-black-text);
+}
+.profile .registration__requisites.no-edit input:-ms-input-placeholder {
+  color: var(--color-black-text);
+}
+.profile .registration__requisites.no-edit input::-ms-input-placeholder {
+  color: var(--color-black-text);
+}
+.profile .registration__requisites.no-edit input::placeholder {
+  color: var(--color-black-text);
+}
+.profile .registration__requisites.no-edit input:disabled {
+  background-color: white;
+}
+.profile .registration__requisites.grid-btn {
+  grid-template-columns: 1fr 1fr;
+}
+.profile .registration__requisites.grid-btn .registration--submit {
+  margin-top: 0;
+}
+.profile .registration__requisites.grid-btn .white-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+}
+.profile input::-webkit-input-placeholder {
+  font-size: var(--font-size-16-14);
+}
+.profile input::-moz-placeholder {
+  font-size: var(--font-size-16-14);
+}
+.profile input:-ms-input-placeholder {
+  font-size: var(--font-size-16-14);
+}
+.profile input::-ms-input-placeholder {
+  font-size: var(--font-size-16-14);
+}
+.profile input::placeholder {
+  font-size: var(--font-size-16-14);
+}
+.profile .default-address {
+  margin-bottom: 20px;
+}
+.profile .default-address .profile-menu__arrow-up-img {
+  display: none;
+}
+.profile .default-address .profile-menu__arrow-down-img {
+  display: none;
+}
+.profile .additional-address {
+  margin-bottom: 20px;
+}
+.profile .additional-address img {
+  margin-left: 30px;
+}
+.profile .additional-address h3 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 334px;
+}
+.profile .additional-address .legal-addr-small {
+  display: none;
+}
+.profile .new-address {
+  margin-bottom: 0;
+  background-color: var(--color-grey-form-bg);
+}
+.profile .new-address .profile-menu__arrow-up-img {
+  display: none;
+}
+.profile .new-address .profile-menu__arrow-down-img {
+  display: none;
+}
+.profile .font-size-20-16 {
+  font-size: var(--font-size-20-16);
+}
+.profile .set-default-address-btn {
+  grid-column: 1/2;
+}
+.profile .edit-address-btn {
+  grid-column: 2/3;
+}
+.profile .confirm-address-btn {
+  grid-column: 2/3;
 }
 
 /* ------------- @media 1199 --------------------------- */
@@ -4955,6 +5098,28 @@ body.backdrop .backdrop-wall {
     grid-column: 1/span 1;
   }
 }
+@media (max-width: 850px) {
+  .profile .registration__requisites.grid-btn {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    justify-items: end;
+  }
+  .profile .registration__requisites .registration--submit {
+    width: 60%;
+  }
+  .profile .set-default-address-btn {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .profile .edit-address-btn {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .profile .confirm-address-btn {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 /* ------------- @media 767 --------------------------- */
 @media (max-width: 767px) {
   .profile__container {
@@ -4962,6 +5127,26 @@ body.backdrop .backdrop-wall {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+  .profile .registration__requisites.grid-btn {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: end;
+  }
+  .profile .registration__requisites .registration--submit {
+    width: 100%;
+  }
+  .profile .set-default-address-btn {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .profile .edit-address-btn {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .profile .confirm-address-btn {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
   .profile-menu {
     width: 100%;
@@ -4974,6 +5159,28 @@ body.backdrop .backdrop-wall {
     grid-column: 1/span 2;
   }
 }
+@media (max-width: 540px) {
+  .profile .registration__requisites.grid-btn {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    justify-items: end;
+  }
+  .profile .registration__requisites .registration--submit {
+    width: 60%;
+  }
+  .profile .set-default-address-btn {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .profile .edit-address-btn {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .profile .confirm-address-btn {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 @media (max-width: 480px) {
   .profile .profile__container {
     padding: 0;
@@ -4983,6 +5190,26 @@ body.backdrop .backdrop-wall {
   }
   .profile-menu__title-text.legal-addr-big {
     display: none;
+  }
+  .profile .registration__requisites .registration--submit {
+    width: 100%;
+  }
+  .profile .default-address .profile-menu__arrow-up-img {
+    display: block;
+  }
+  .profile .additional-address .legal-addr-big {
+    display: none;
+  }
+  .profile .additional-address .legal-addr-small {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .profile .additional-address h3 {
+    width: 205px;
+  }
+  .profile .new-address .profile-menu__arrow-up-img {
+    display: block;
   }
 }
 .btn {
