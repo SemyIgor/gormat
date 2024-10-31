@@ -4793,13 +4793,15 @@ body.backdrop .backdrop-wall {
 .profile-menu {
   border: 2px solid var(--color-gray-header-bg);
   border-radius: calc(var(--border-radius-6) + 2px);
-  width: 32%;
+  width: 31%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .profile-menu__title {
   border-radius: 0 0 var(--border-radius-6) var(--border-radius-6);
@@ -4815,6 +4817,20 @@ body.backdrop .backdrop-wall {
   align-items: center;
   height: 40px;
   background: var(--color-black-text);
+  cursor: pointer;
+}
+.profile-menu__title.additional svg {
+  cursor: pointer;
+  stroke: var(--color-white);
+}
+.profile-menu__title.additional:hover .profile-menu__arrow-down-img svg {
+  stroke: var(--color-green);
+}
+.profile-menu__title.additional:hover .profile-menu__arrow-up-img svg {
+  stroke: var(--color-green);
+}
+.profile-menu__title.additional h3 svg:hover {
+  stroke: var(--color-red);
 }
 .profile-menu__title.all-round {
   border-radius: var(--border-radius-6);
@@ -4824,6 +4840,9 @@ body.backdrop .backdrop-wall {
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .profile-menu__title-text.legal-addr-small {
   display: none;
@@ -4935,10 +4954,12 @@ body.backdrop .backdrop-wall {
       }
   } */
 }
-.profile .profile-main__personal-data--module, .profile .profile-main__address--module {
+.profile .profile-main__personal-data--module, .profile .profile-main__address--module, .profile .profile-main__payment--module {
   border: 2px solid var(--color-gray-header-bg);
   border-radius: calc(var(--border-radius-6) + 2px);
   overflow: hidden;
+}
+.profile .profile-main__personal-data--module, .profile .profile-main__address--module {
   margin-bottom: 30px;
 }
 .profile .profile-main .registration__nds-checkbox {
@@ -5076,6 +5097,12 @@ body.backdrop .backdrop-wall {
 .profile .new-address .profile-menu__arrow-down-img {
   display: none;
 }
+.profile .edit-address-btn input, .profile .confirm-address-btn input, .profile .add-address-btn input {
+  cursor: pointer;
+}
+.profile .edit-address-btn input:hover, .profile .confirm-address-btn input:hover, .profile .add-address-btn input:hover {
+  opacity: 0.7;
+}
 .profile .font-size-20-16 {
   font-size: var(--font-size-20-16);
 }
@@ -5088,8 +5115,20 @@ body.backdrop .backdrop-wall {
 .profile .confirm-address-btn {
   grid-column: 2/3;
 }
+[class$=-big] {
+  display: block;
+}
+
+[class$=-small] {
+  display: none;
+}
 
 /* ------------- @media 1199 --------------------------- */
+@media (max-width: 1199px) {
+  .profile .payment__logos {
+    padding: 30px calc(18px + 27 * (100vw - 320px) / 879);
+  }
+}
 @media (max-width: 950px) {
   .profile .registration__requisites {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -5127,6 +5166,7 @@ body.backdrop .backdrop-wall {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 10px;
   }
   .profile .registration__requisites.grid-btn {
     grid-template-columns: 1fr 1fr;
@@ -5184,6 +5224,12 @@ body.backdrop .backdrop-wall {
 @media (max-width: 480px) {
   .profile .profile__container {
     padding: 0;
+  }
+  [class$=-big] {
+    display: none;
+  }
+  [class$=-small] {
+    display: block;
   }
   .profile-menu__title-text.legal-addr-small {
     display: block;

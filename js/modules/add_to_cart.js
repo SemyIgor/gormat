@@ -1,12 +1,10 @@
 let testVar = 0;
-console.log("testVar: ", testVar);
 // Changes mark !!!
 document.addEventListener("DOMContentLoaded", () => {
     // const addToCartBtn = document.getElementById("add-to-cart__btn");
     const addToCartBtns = document.querySelectorAll(".open-pop-up--btn");
 
     if (addToCartBtns.length > 0) {
-        console.log("addToCartBtns.length: ", addToCartBtns.length);
         addToCartBtns.forEach((btn) => {
             btn.addEventListener("click", function () {
                 const src = this.getAttribute("data-src");
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         parseInt(clickedPlusNumber.value) + 1;
                 }
 
-                console.log("testVar: ", testVar);
                 if (testVar == 1) {
                     // Добавляем обработчики событий в блоках счётчиков
                     // Кнопки минус
@@ -76,8 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-    } else {
-        console.log("Not found !");
     }
 });
 
