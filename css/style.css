@@ -4824,6 +4824,11 @@ body.backdrop .backdrop-wall {
   height: 40px;
   background: var(--color-black-text);
   cursor: pointer;
+  /* Не работает, так как родительский блок обрезает блок заголовка и не даёт ему "наползти" на границы */
+  /*         position: relative;
+  width: calc(100% + 2px);
+  left: -1px;
+  z-index: 2000; */
 }
 .profile-menu__title.additional svg {
   cursor: pointer;
@@ -5115,6 +5120,13 @@ body.backdrop .backdrop-wall {
 .orders {
   /* Дополнительные заголовки для каждого товара при малой ширине экрана */
 }
+.orders .additional-address.profile-main__address--module {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.orders .additional-address.profile-main__address--module:last-child {
+  margin-bottom: 0px;
+}
 .orders.profile-menu__title {
   border-radius: var(--border-radius-6);
 }
@@ -5141,9 +5153,8 @@ body.backdrop .backdrop-wall {
 .orders.profile-menu__title .order-dot {
   margin: 4px;
 }
-.orders .u-goods-items {
-  margin-top: 15px;
-  margin-bottom: 20px;
+.orders .content-block {
+  margin-top: 10px;
 }
 .orders.u-goods {
   border: 1px solid var(--color-gray-header-bg);
@@ -5151,8 +5162,11 @@ body.backdrop .backdrop-wall {
   border-bottom: none;
   margin-left: 10px;
   margin-right: 10px;
+}
+.orders .u-goods-items {
+  margin-top: 15px;
   /* margin-bottom: 20px; */
-  /* padding-bottom: 10px; */
+  padding-bottom: 20px;
 }
 .orders.order__title {
   display: grid;
@@ -5248,7 +5262,7 @@ body.backdrop .backdrop-wall {
   /* grid-template-columns: repeat(auto-fit, minmax(135px, 142px)); */
   grid-template-rows: 62px;
   gap: 10px;
-  padding: 10px;
+  padding: 10px 10px 0px;
   /* justify-content: start; */
 }
 .orders-info__item {
@@ -5633,8 +5647,12 @@ body.backdrop .backdrop-wall {
   }
   .orders .additional-address {
     padding-bottom: 20px;
-    /* border: none; */
-    /* border-radius: 0; */
+  }
+  .orders .additional-address.profile-main__address--module {
+    padding-bottom: 0px;
+  }
+  .orders .additional-address.profile-main__address--module:has(.content-block.display--none) {
+    padding-bottom: 10px;
   }
   .orders.u-goods {
     margin-right: 0;
@@ -5652,6 +5670,11 @@ body.backdrop .backdrop-wall {
   }
   .order-result {
     grid-template-columns: 1fr auto 85px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
   .order-repeat__btn {
     grid-column: 1/2;
@@ -5738,7 +5761,6 @@ body.backdrop .backdrop-wall {
     line-height: initial;
   }
   .order-result {
-    /* grid-template-columns: 1fr 160px; */
     grid-template-columns: 1fr 36%;
     grid-template-rows: repeat(4, 38px);
     -webkit-column-gap: 40px;
@@ -5762,6 +5784,7 @@ body.backdrop .backdrop-wall {
     grid-column: 1/2;
     grid-row: 1/2;
     font-size: 14px;
+    letter-spacing: -0.2px;
   }
   .order-delivery-sum__result {
     grid-column: 2/3;
