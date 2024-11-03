@@ -1782,7 +1782,8 @@
                 </div>
             </div>
 
-            <div class="profile-main__orders profile-module display--none" data-menu="orders">
+            <!-- Заказы -->
+            <div class="profile-main__orders profile-module orders display--none" data-menu="orders">
                 <!-- Заказ №1 -->
                 <div class="profile-main__address--module additional-address">
                     <div class="profile-menu__title additional orders">
@@ -1848,151 +1849,442 @@
                         </div>
                     </div>
 
+                    <!-- Скрывающаяся часть -->
                     <div class="content-block display--none">
 
-                        <div class="goods">
+                        <div class="u-goods u-pop-up orders">
 
-                            <div class="order__title">
-                                <h3 class="order__title-text">Товары: <span>3</span> шт.</h3>
-                                <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow"
-                                    class="order__title-image">
+                            <div class="orders order__title">
+                                <span class="order__title--empty"></span>
+                                <span class="order__title--name">Наименование товара</span>
+                                <span class="order__title--quantity">Кол-во</span>
+                                <span class="order__title--price">Цена за ед.</span>
+                                <span class="order__title--sum">Сумма</span>
                             </div>
 
-                            <div class="goods-items cart">
+                            <!-- Перечень заказанных товаров -->
+                            <div class="u-goods-items u-pop-up">
 
-                                <div class="goods-item">
-                                    <div class="goods-item__img">
+                                <!-- Товар №1 -->
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
                                         <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
                                     </div>
 
-                                    <div class="goods-item__info-txt">
-                                        <div class="goods-item__info">
-                                            <div class="category">Мужское теннисное поло</div>
-                                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry
-                                                Technology -
-                                                красный/оранжевый</div>
-                                            <div class="more-info">
-                                                <span class="color">Цвет: <span>
-                                                        <красный /span>
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
                                                     </span>
-                                                    <span class="size">• Размер: <span>XL</span> </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
                                             </div>
                                         </div>
-
-
-                                        <div class="goods-item__money-block">
-                                            <div class="product-counter">
-                                                <button class="product__btn--minus">
-                                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
-                                                </button>
-                                                <input type="number" name="product1-name" class="product-number"
-                                                    value="1">
-                                                <button class="product__btn--plus"><img
-                                                        src="image/card_product/product_btn_plus.svg"
-                                                        alt="Plus"></button>
-                                            </div>
-
-                                            <div class="goods-item__price-and-cart">
-                                                <div class="goods-item__price">21 745.00 руб.</div>
-
-                                                <button class="goods-item__cart-img">
-                                                    <img src="image/cart/delete.svg" alt="Cart Delete">
-                                                </button>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                </div>
 
-                                <div class="goods-item">
-                                    <div class="goods-item__img">
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+                                <!-- / товар №1 -->
+
+                                <!-- Товар №2 -->
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
                                         <img src="image/cart/goods_item_img-02.png" alt="Good's Image">
                                     </div>
 
-                                    <div class="goods-item__info-txt">
-                                        <div class="goods-item__info">
-                                            <div class="category">Мужское теннисное поло</div>
-                                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry
-                                                Technology -
-                                                красный/оранжевый</div>
-                                            <div class="more-info">
-                                                <span class="color">Цвет: <span>красный</span> </span>
-                                                <span class="size">• Размер: <span>XL</span> </span>
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
                                             </div>
                                         </div>
-
-                                        <div class="goods-item__money-block">
-                                            <div class="product-counter">
-                                                <button class="product__btn--minus">
-                                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
-                                                </button>
-                                                <input type="number" name="product2-name" class="product-number"
-                                                    value="1">
-                                                <button class="product__btn--plus"><img
-                                                        src="image/card_product/product_btn_plus.svg"
-                                                        alt="Plus"></button>
-                                            </div>
-
-                                            <div class="goods-item__price-and-cart">
-                                                <div class="goods-item__price">210 745.00 руб.</div>
-
-                                                <button class="goods-item__cart-img">
-                                                    <img src="image/cart/delete.svg" alt="Cart Delete">
-                                                </button>
-                                            </div>
-                                        </div>
-
-
                                     </div>
-                                </div>
 
-                                <div class="goods-item">
-                                    <div class="goods-item__img">
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+                                <!-- / товар №2 -->
+
+                                <!-- Товар №3 -->
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
                                         <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
                                     </div>
 
-                                    <div class="goods-item__info-txt">
-                                        <div class="goods-item__info">
-                                            <div class="category">Мужское теннисное поло</div>
-                                            <div class="name">Lacoste Tennis x Novak Djokovic Printed Polo-Dry
-                                                Technology -
-                                                красный/оранжевый</div>
-                                            <div class="more-info">
-                                                <span class="color">Цвет: <span>красный</span> </span>
-                                                <span class="size">• Размер: <span>XL</span> </span>
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
                                             </div>
-                                        </div>
-
-                                        <div class="goods-item__money-block">
-                                            <div class="product-counter">
-                                                <button class="product__btn--minus">
-                                                    <img src="image/card_product/product_btn_minus.svg" alt="Minus">
-                                                </button>
-                                                <input type="number" name="product3-name" class="product-number"
-                                                    value="1">
-                                                <button class="product__btn--plus"><img
-                                                        src="image/card_product/product_btn_plus.svg"
-                                                        alt="Plus"></button>
-                                            </div>
-
-                                            <div class="goods-item__price-and-cart">
-                                                <div class="goods-item__price">21 745.00 руб.</div>
-
-                                                <button class="goods-item__cart-img">
-                                                    <img src="image/cart/delete.svg" alt="Cart Delete">
-                                                </button>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+                                <!-- / товар №3 -->
+
+                            </div>
+                            <!-- / перечень заказанных товаров -->
                         </div>
 
+                        <!-- Итог заказа -->
+                        <div class="order-result">
+                            <button class="order-repeat__btn">Повторить заказ</button>
+                            <div class="order-delivery-sum__txt">Стоимость доставки:</div>
+                            <div class="order-delivery-sum__result">1 100.00 руб.</div>
+                            <div class="order-sum__txt">Сумма за заказ:</div>
+                            <div class="order-sum__result">65 235.00 руб.</div>
+                        </div>
+                        <!-- / итог заказа -->
                     </div>
+                    <!-- / скрывающаяся часть -->
                 </div>
 
                 <!-- Заказ №2 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title additional orders">
+
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Заказ от
+                            <span class="order-date">10.04.23</span>
+                            <span class="order-time">10:45</span>
+                            <span class="order-dot"> • </span>
+                            <span>Товар: </span>
+                            <span class="counter">4</span>
+                            <span>шт.</span>
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small">
+                            <span class="order-date">10.04.23</span>
+                            <span class="order-time">10:45</span>
+                            <span class="order-dot"> • </span>
+                            <span>Товар: </span>
+                            <span class="counter">4</span>
+                            <span>шт.</span>
+                        </h3>
+
+                        <!-- Стрелки на TAB-е -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up" data-svg="">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down" data-svg="">
+                        </div>
+                    </div>
+
+                    <div class="orders-info--short">
+                        <div class="orders-info__item">
+                            <span class="title">Дата</span>
+                            <span class="text">10.04.23 10:45</span>
+                            <span class="warning"></span>
+                        </div>
+
+                        <div class="orders-info__item">
+                            <span class="title">№ заказа</span>
+                            <span class="text">756</span>
+                            <span class="warning"></span>
+                        </div>
+
+                        <div class="orders-info__item">
+                            <span class="title">Тип доставки</span>
+                            <span class="text">Самовывоз</span>
+                            <span class="warning"></span>
+                        </div>
+
+                        <div class="orders-info__item">
+                            <span class="title">Статус заказа</span>
+                            <span class="text">Ваш заказ ещё не обработан</span>
+                            <span class="warning"></span>
+                        </div>
+
+                        <div class="orders-info__item">
+                            <a href="#" class="to-pay__btn">
+                                <span class="title">Статус платежа</span>
+                                <span class="text">Заказ не оплачен</span>
+                                <span class="warning">Оплатить</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Скрывающаяся часть -->
+                    <div class="content-block display--none">
+
+                        <div class="u-goods u-pop-up orders">
+
+                            <div class="order__title orders">
+                                <span class="order__title--empty"></span>
+                                <span class="order__title--name">Наименование товара</span>
+                                <span class="order__title--quantity">Кол-во</span>
+                                <span class="order__title--price">Цена за ед.</span>
+                                <span class="order__title--sum">Сумма</span>
+                            </div>
+
+                            <!-- Перечень заказанных товаров -->
+                            <div class="u-goods-items u-pop-up">
+
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
+                                        <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
+                                    </div>
+
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
+                                        <img src="image/cart/goods_item_img-02.png" alt="Good's Image">
+                                    </div>
+
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            2
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">43 490.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
+                                        <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
+                                    </div>
+
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+
+                            </div>
+                            <!-- / перечень заказанных товаров -->
+                        </div>
+
+                        <!-- Итог заказа -->
+                        <div class="order-result">
+                            <button class="order-repeat__btn">Повторить заказ</button>
+                            <div class="order-delivery-sum__txt">Стоимость доставки:</div>
+                            <div class="order-delivery-sum__result">1 100.00 руб.</div>
+                            <div class="order-sum__txt">Сумма за заказ:</div>
+                            <div class="order-sum__result">65 235.00 руб.</div>
+                        </div>
+                        <!-- / итог заказа -->
+                    </div>
+                    <!-- / скрывающаяся часть -->
+                </div>
+
+                <!-- Заказ №3 -->
                 <div class="profile-main__address--module additional-address">
                     <div class="profile-menu__title additional orders">
 
@@ -2059,24 +2351,28 @@
 
                     <div class="content-block display--none">
 
-                        <div class="u-goods u-pop-up">
+                        <div class="u-goods u-pop-up orders">
 
-                            <div class="order__title">
-                                <h3 class="order__title-text">Товары: <span>3</span> шт.</h3>
-                                <img src="image/cart/drop_up_arrow.svg" alt="Drop-Up Arrow"
-                                    class="order__title-image">
+                            <div class="order__title orders">
+                                <span class="order__title--empty"></span>
+                                <span class="order__title--name">Наименование товара</span>
+                                <!-- <div class="order__title--money-block"> -->
+                                <span class="order__title--quantity">Кол-во</span>
+                                <span class="order__title--price">Цена за ед.</span>
+                                <span class="order__title--sum">Сумма</span>
+                                <!-- </div> -->
                             </div>
 
                             <div class="u-goods-items u-pop-up">
 
                                 <div class="u-goods-item">
                                     <!-- Картинка -->
-                                    <div class="u-goods-item__img">
+                                    <div class="u-goods-item__img u-goods-item__elem">
                                         <img src="image/cart/goods_item_img-01.png" alt="Good's Image">
                                     </div>
 
                                     <!-- Текст рядом с картинкой -->
-                                    <div class="u-goods-item__info-txt">
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
                                         <div class="u-goods-item__info">
                                             <div class="u-category">Мужское теннисное поло</div>
                                             <div class="u-name">
@@ -2092,64 +2388,41 @@
                                         </div>
                                     </div>
 
-                                    <div class="u-goods-item__money-block">
+                                    <!-- <div class="u-goods-item__money-block"> -->
 
-                                        <!-- Количество товара -->
-                                        <div class="u-product-counter">
-                                            <input type="number" name="product1-name" class="u-product-number"
-                                                value="1">
-                                        </div>
-
-                                        <!-- Цена товара -->
-                                        <div class="u-product-item__price">
-                                            <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
                                         </div>
                                     </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
                                 </div>
 
                                 <div class="u-goods-item">
-                                    <div class="u-goods-item__img">
-                                        <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
-                                    </div>
-
-                                    <div class="u-goods-item__info-txt">
-                                        <div class="u-goods-item__info">
-                                            <div class="u-category">Мужское теннисное поло</div>
-                                            <div class="u-name">
-                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
-                                                    красный/оранжевый</p>
-                                            </div>
-                                            <div class="u-more-info">
-                                                <span class="u-color">Цвет:<span>
-                                                        <красный </span>
-                                                    </span>
-                                                    <span class="u-size">• Размер: <span>XL</span> </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="u-goods-item__money-block">
-
-                                        <!-- Количество товара -->
-                                        <div class="u-product-counter">
-                                            <input type="number" name="product1-name" class="u-product-number"
-                                                value="1">
-                                        </div>
-
-                                        <!-- Цена товара -->
-                                        <div class="u-product-item__price">
-                                            <div class="u-product-item__price-current">21 745.00 руб.</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="u-goods-item">
-                                    <div class="u-goods-item__img">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
                                         <img src="image/cart/goods_item_img-02.png" alt="Good's Image">
                                     </div>
 
-                                    <div class="u-goods-item__info-txt">
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
                                         <div class="u-goods-item__info">
                                             <div class="u-category">Мужское теннисное поло</div>
                                             <div class="u-name">
@@ -2165,25 +2438,85 @@
                                         </div>
                                     </div>
 
-                                    <div class="u-goods-item__money-block">
+                                    <!-- <div class="u-goods-item__money-block"> -->
 
-                                        <!-- Количество товара -->
-                                        <div class="u-product-counter">
-                                            <input type="number" name="product1-name" class="u-product-number"
-                                                value="1">
-                                        </div>
-
-                                        <!-- Цена товара -->
-                                        <div class="u-product-item__price">
-                                            <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
                                         </div>
                                     </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
+                                </div>
+
+                                <div class="u-goods-item">
+                                    <!-- Картинка -->
+                                    <div class="u-goods-item__img u-goods-item__elem">
+                                        <img src="image/cart/goods_item_img-03.png" alt="Good's Image">
+                                    </div>
+
+                                    <!-- Текст рядом с картинкой -->
+                                    <div class="u-goods-item__info-txt u-goods-item__elem">
+                                        <div class="u-goods-item__info">
+                                            <div class="u-category">Мужское теннисное поло</div>
+                                            <div class="u-name">
+                                                <p>Lacoste Tennis x Novak Djokovic Printed Polo-Dry Technology -
+                                                    красный/оранжевый</p>
+                                            </div>
+                                            <div class="u-more-info">
+                                                <span class="u-color">Цвет:<span>
+                                                        <красный </span>
+                                                    </span>
+                                                    <span class="u-size">• Размер: <span>XL</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="u-goods-item__money-block"> -->
+
+                                    <!-- Количество товара -->
+                                    <div class="u-product-counter u-goods-item__elem">
+                                        <div class="u-product-number">
+                                            1
+                                        </div>
+                                    </div>
+
+                                    <span class="order__title--quantity subtitle">Кол-во</span>
+
+                                    <!-- Цена товара -->
+                                    <div class="u-product-item__price u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--price subtitle">Цена за ед.</span>
+
+                                    <!-- Общая сумма -->
+                                    <div class="u-product-item__sum u-goods-item__elem">
+                                        <div class="u-product-item__price-current">21 745.00 руб.</div>
+                                    </div>
+
+                                    <span class="order__title--sum subtitle">Сумма</span>
+                                    <!-- </div> u-goods-item__money-block -->
                                 </div>
 
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
