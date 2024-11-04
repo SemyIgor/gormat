@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name=”keywords” contents=”html, course, css, tags”>
-    <meta name=”description” content=”Это базовый курс по HTML”>
+    <meta name=”keywords” contents=”html, tennis”>
+    <meta name=”description” content=”Сайт про спортивные товары”>
 
     <title>Gormat Tennis</title>
 
@@ -132,7 +132,6 @@
 
                         <li class="account-list__item account-list__item_login">
                             <a href="#" class="account-list__link">
-                                <!-- <img src="icons/account/login.png" alt="Аккаунт" class="account-list__icon"> -->
                                 <img src="icons/account/login.svg" alt="Аккаунт" class="account-list__icon _svg">
                             </a>
 
@@ -333,16 +332,18 @@
                                                             <input type="text" name="" placeholder="ИНН компании"
                                                                 maxlength="20" minlength="20" required />
                                                         </div>
-                                                    </div>
 
-                                                    <div class="registration__nds-checkbox pop-up">
-                                                        <label>
-                                                            <input type="radio" name="nds-checkbox" class="real-radio"
-                                                                value="">
+                                                        <div class="registration__nds-checkbox pop-up">
+                                                            <label>
+                                                                <input type="checkbox" name="nds-checkbox"
+                                                                    class="real-radio" value="">
 
-                                                            <span class="filter__custom-radio pop-up"></span>
-                                                            Я хочу получить счёт-фактуру НДС
-                                                        </label>
+                                                                <span class="filter__custom-radio pop-up"></span>
+                                                                <div>Я хочу
+                                                                    получить счёт-фактуру НДС</div>
+
+                                                            </label>
+                                                        </div>
                                                     </div>
 
                                                     <div
@@ -415,11 +416,14 @@
 
                                                         <div class="registration__address-checkbox">
                                                             <label>
-                                                                <input type="radio" name="address-checkbox"
+                                                                <input type="checkbox" name="address-checkbox"
                                                                     class="real-radio" value="">
 
                                                                 <span class="filter__custom-radio pop-up"></span>
-                                                                Юридический адрес совпадает с адресом доставки
+
+                                                                <div>Юридический
+                                                                    адрес совпадает с адресом доставки</div>
+
                                                             </label>
                                                         </div>
 
@@ -922,7 +926,290 @@
 <div class="backdrop-wall"></div>
 <!-- /mobile -->
 
-<h1 style="padding: 50px 0; text-align: center;">Profile_Company</h1>
+<section class="page-titles">
+    <div class="page-titles__container">
+        <!-- === Заголовки страницы === -->
+        <div class="page-title display--none" data-menu="profile-company">Профиль</div>
+        <!-- / Заголовки страницы -->
+    </div>
+</section>
+
+
+<section class="profile">
+    <div class="profile__container">
+
+        <aside class="profile-menu">
+            <div class="profile-menu__title">
+    <h3 class="profile-menu__title-text">Меню:</h3>
+
+    <!-- Одна из стрелок должна появиться на малом экране -->
+    <div class="profile-menu__arrow-up-img display--none">
+        <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+    </div>
+    <div class="profile-menu__arrow-down-img display--none">
+        <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+    </div>
+</div>
+
+<div class="profile-menu__list">
+    <ul>
+        <li><a href="profile.html" class="profile-menu__item profile-menu-radio">Профиль</a></li>
+        <li><a href="profile_company.html" class="profile-menu__item profile-menu-radio">Профиль</a></li>
+        <li><a href="delivery_address.html" class="profile-menu__item profile-menu-radio">Адреса
+                доставки</a></li>
+        <li><a href="payment.html" class="profile-menu__item profile-menu-radio">Способы оплаты</a></li>
+        <li><a href="orders.html" class="profile-menu__item profile-menu-radio">Заказы</a></li>
+    </ul>
+
+    <a href="#" class="profile-menu__btn"><img src="image/profile/exit.svg" alt="Exit"> Выйти</a>
+</div>
+        </aside>
+
+        <main class="profile-main">
+
+            <!-- Профиль компании -->
+            <div class="profile-main__company-data profile-module" data-menu="profile-company">
+
+                <!-- Мои данные -->
+                <div class="profile-main__personal-data--module profile-main__profile-module">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text">Мои данные</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="registration__requisites no-edit">
+
+                        <div class="requisites-item pers-name">
+                            <label for="#">Имя</label>
+                            <input type="text" name="" placeholder="Иван" maxlength="8" minlength="2" disabled />
+                        </div>
+
+                        <div class="requisites-item surname">
+                            <label for="#">Фамилия</label>
+                            <input type="text" name="" placeholder="Иванов" maxlength="8" minlength="2" disabled />
+                        </div>
+
+                        <div class="requisites-item e-mail">
+                            <label for="#">E-mail</label>
+                            <input type="email" name="" placeholder="ivanov.ivan@gmail.com" disabled />
+                        </div>
+
+                        <div class="requisites-item phone">
+                            <label for="#">Телефон</label>
+                            <input type="tel" name="" placeholder="+1 234 456 78 90" disabled />
+                        </div>
+
+                        <div class="requisites-item company">
+                            <label for="#">Компания</label>
+                            <input type="text" name="" placeholder="ООО “Рога и копыта”" maxlength="20" minlength="3"
+                                disabled />
+                        </div>
+
+                        <div class="requisites-item inn">
+                            <label for="#">ИНН</label>
+                            <input type="text" name="" placeholder="1251512412351" maxlength="20" minlength="20"
+                                disabled />
+                        </div>
+                    </div>
+
+                    <!-- Я хочу получить счёт-фактуру НДС -->
+                    <div class="registration__nds-checkbox">
+                        <label>
+                            <input type="checkbox" name="nds-checkbox" class="real-radio" value="">
+
+                            <span class="filter__custom-radio"></span>
+                            Я хочу получить счёт-фактуру НДС
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Юридический адрес -->
+                <div class="profile-main__address--module profile-main__profile-module">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text">Юридический адрес</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <div class="registration__requisites no-edit">
+
+                        <div class="requisites-item country">
+                            <label for="country">Страна</label>
+                            <input type="text" name="" placeholder="Беларусь" required>
+                        </div>
+
+                        <div class="requisites-item city">
+                            <label for="city">Город</label>
+                            <input type="text" name="" placeholder="Минск" disabled>
+                        </div>
+
+                        <div class="requisites-item address">
+                            <label for="address">Адрес</label>
+                            <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                        </div>
+
+                        <div class="requisites-item zip">
+                            <label for="zip">Индекс</label>
+                            <input type="text" name="" placeholder="220 004" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Изменить данные -->
+                <div class="profile-main__personal-data--module profile-main__profile-module">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text">Изменить данные</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <form action="#" class="registration__form person">
+                        <div class="registration__requisites">
+
+                            <div class="requisites-item pers-name">
+                                <label for="#">Имя</label>
+                                <input type="text" name="" placeholder="Иван" maxlength="8" minlength="2" required />
+                            </div>
+
+                            <div class="requisites-item surname">
+                                <label for="#">Фамилия</label>
+                                <input type="text" name="" placeholder="Иванов" maxlength="8" minlength="2" required />
+                            </div>
+
+                            <div class="requisites-item e-mail">
+                                <label for="#">E-mail</label>
+                                <input type="email" name="" placeholder="ivanov.ivan@gmail.com" required />
+                            </div>
+
+                            <div class="requisites-item phone">
+                                <label for="#">Телефон</label>
+                                <input type="tel" name="" placeholder="+1 234 456 78 90" required />
+                            </div>
+
+                            <div class="requisites-item company">
+                                <label for="#">Компания</label>
+                                <input type="text" name="" placeholder="ООО “Рога и копыта”" maxlength="20"
+                                    minlength="3" required />
+                            </div>
+
+                            <div class="requisites-item inn">
+                                <label for="#">ИНН</label>
+                                <input type="text" name="" placeholder="1251512412351" maxlength="20" minlength="20"
+                                    required />
+                            </div>
+
+                            <div class="requisites-item password">
+                                <label for="#">Пароль</label>
+                                <input type="password" name="" placeholder="Придумайте новый пароль" required />
+                            </div>
+
+                            <div class="requisites-item password">
+                                <label for="#">Подтверждение пароля</label>
+                                <input type="password" name="" placeholder="Введите новый пароль ещё раз" required />
+                            </div>
+
+                        </div>
+                        <!-- Я хочу получить счёт-фактуру НДС -->
+                        <div class="registration__nds-checkbox">
+                            <label>
+                                <input type="checkbox" name="nds-checkbox" class="real-radio" value="">
+
+                                <span class="filter__custom-radio"></span>
+                                Я хочу получить счёт-фактуру НДС
+                            </label>
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit person">
+                                <input type="submit" value="Подтвердить изменения">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Изменить юридический адрес -->
+                <div class="profile-main__address--module profile-main__profile-module">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text legal-addr-big">Изменить юридический адрес</h3>
+                        <h3 class="profile-menu__title-text legal-addr-small">Изменить Юр. адрес</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <form action="#" class="registration__form person">
+                        <div class="registration__requisites">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" required>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" required>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" required>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" required>
+                            </div>
+
+                        </div>
+                        <!-- Юридический адрес совпадает с адресом доставки по умолчанию -->
+                        <div class="registration__address-checkbox">
+                            <label>
+                                <input type="checkbox" name="address-checkbox" class="real-radio" value="">
+
+                                <span class="filter__custom-radio"></span>
+                                <span>
+                                    Юридический адрес совпадает с адресом доставки по умолчанию
+
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit person">
+                                <input type="submit" value="Подтвердить изменения">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</section>
 
 <!-- footer -->
 <footer class="footer">

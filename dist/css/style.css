@@ -1675,6 +1675,19 @@ $project-color: #8B4513; */
   margin-bottom: 30px;
   margin-right: 20px;
 }
+.registration__tab {
+  position: relative;
+}
+.registration__tab a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  text-decoration: none;
+  color: transparent;
+}
 .registration__requisites {
   padding: 0 20px;
   display: grid;
@@ -3685,14 +3698,32 @@ label {
 .registration__nds-checkbox.pop-up {
   font-size: 16px;
   letter-spacing: -0.2px;
+  grid-column: 1/-1;
+}
+.registration__nds-checkbox.pop-up label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .registration__address-checkbox label {
   font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 span.filter__custom-radio.pop-up {
   margin-left: 0;
+  margin-top: 6px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .carousel__button.is-close {
@@ -3715,8 +3746,8 @@ span.filter__custom-radio.pop-up {
   }
   .registration__nds-checkbox.pop-up {
     margin-bottom: calc(50px + -20 * (100vw - 320px) / 879);
-    padding-left: 20px;
-    padding-right: 20px;
+    /*         padding-left: 20px;
+    padding-right: 20px; */
   }
 }
 @media (max-width: 420px) {
@@ -4905,7 +4936,7 @@ body.backdrop .backdrop-wall {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 20px;
   /*  */
   width: 100%;
   height: 40px;
@@ -4918,7 +4949,8 @@ body.backdrop .backdrop-wall {
 }
 .profile-menu .profile-menu-radio:hover {
   /* background-color: var(--color-black-btn-border); */
-  background-color: rgba(207, 209, 213, 0.3);
+  /* background-color: rgba(207, 209, 213, 0.3); */
+  background-color: rgba(40, 39, 43, 0.3);
 }
 .profile-menu .real-radio:checked + .profile-menu-radio {
   background-color: rgba(40, 39, 43, 0.3);
@@ -4954,6 +4986,10 @@ body.backdrop .backdrop-wall {
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  /*         &__personal-data--module,
+  &__address--module {
+      margin-bottom: 30px;
+  } */
 }
 .profile .profile-main__payment--module {
   margin-bottom: 83px;
@@ -4963,7 +4999,7 @@ body.backdrop .backdrop-wall {
   border-radius: calc(var(--border-radius-6) + 2px);
   overflow: hidden;
 }
-.profile .profile-main__personal-data--module, .profile .profile-main__address--module {
+.profile .profile-main__profile-module:not(:last-child) {
   margin-bottom: 30px;
 }
 .profile .profile-main .registration__nds-checkbox {

@@ -24,65 +24,7 @@
     <div class="profile__container">
 
         <aside class="profile-menu">
-
-            <div class="profile-menu__title">
-                <h3 class="profile-menu__title-text">Меню:</h3>
-
-                <!-- Одна из стрелок должна появиться на малом экране -->
-                <div class="profile-menu__arrow-up-img display--none">
-                    <img src="../image/profile/white_arrow-up.svg" alt="Arrow Up">
-                </div>
-                <div class="profile-menu__arrow-down-img display--none">
-                    <img src="../image/profile/white_arrow-down.svg" alt="Arrow Down">
-                </div>
-            </div>
-
-            <div class="profile-menu__list">
-                <ul>
-                    <li>
-                        <label>
-                            <input type="radio" name="profile-menu" class="real-radio" value="profile-person"
-                                data-menu="profile-person" checked>
-                            <span class="profile-menu-radio">Профиль</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <input type="radio" name="profile-menu" class="real-radio" value="profile-company"
-                                data-menu="profile-company">
-                            <span class="profile-menu-radio">Профиль</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <input type="radio" name="profile-menu" class="real-radio" value="delivery-address"
-                                data-menu="delivery-address">
-                            <span class="profile-menu-radio">Адреса доставки</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <input type="radio" name="profile-menu" class="real-radio" value="payment-type"
-                                data-menu="payment-type">
-                            <span class="profile-menu-radio">Способы оплаты</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <input type="radio" name="profile-menu" class="real-radio" value="orders"
-                                data-menu="orders">
-                            <span class="profile-menu-radio">Заказы</span>
-                        </label>
-                    </li>
-                </ul>
-
-                <a href="#" class="profile-menu__btn"><img src="../image/profile/exit.svg" alt="Exit"> Выйти</a>
-            </div>
-
+            @@include('html_parts/universals/_profile_menu.html')
         </aside>
 
         <main class="profile-main">

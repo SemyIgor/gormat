@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name=”keywords” contents=”html, course, css, tags”>
-    <meta name=”description” content=”Это базовый курс по HTML”>
+    <meta name=”keywords” contents=”html, tennis”>
+    <meta name=”description” content=”Сайт про спортивные товары”>
 
     <title>Gormat Tennis</title>
 
@@ -132,7 +132,6 @@
 
                         <li class="account-list__item account-list__item_login">
                             <a href="#" class="account-list__link">
-                                <!-- <img src="icons/account/login.png" alt="Аккаунт" class="account-list__icon"> -->
                                 <img src="icons/account/login.svg" alt="Аккаунт" class="account-list__icon _svg">
                             </a>
 
@@ -333,16 +332,18 @@
                                                             <input type="text" name="" placeholder="ИНН компании"
                                                                 maxlength="20" minlength="20" required />
                                                         </div>
-                                                    </div>
 
-                                                    <div class="registration__nds-checkbox pop-up">
-                                                        <label>
-                                                            <input type="radio" name="nds-checkbox" class="real-radio"
-                                                                value="">
+                                                        <div class="registration__nds-checkbox pop-up">
+                                                            <label>
+                                                                <input type="checkbox" name="nds-checkbox"
+                                                                    class="real-radio" value="">
 
-                                                            <span class="filter__custom-radio pop-up"></span>
-                                                            Я хочу получить счёт-фактуру НДС
-                                                        </label>
+                                                                <span class="filter__custom-radio pop-up"></span>
+                                                                <div>Я хочу
+                                                                    получить счёт-фактуру НДС</div>
+
+                                                            </label>
+                                                        </div>
                                                     </div>
 
                                                     <div
@@ -415,11 +416,14 @@
 
                                                         <div class="registration__address-checkbox">
                                                             <label>
-                                                                <input type="radio" name="address-checkbox"
+                                                                <input type="checkbox" name="address-checkbox"
                                                                     class="real-radio" value="">
 
                                                                 <span class="filter__custom-radio pop-up"></span>
-                                                                Юридический адрес совпадает с адресом доставки
+
+                                                                <div>Юридический
+                                                                    адрес совпадает с адресом доставки</div>
+
                                                             </label>
                                                         </div>
 
@@ -922,7 +926,376 @@
 <div class="backdrop-wall"></div>
 <!-- /mobile -->
 
-<h1 style="padding: 50px 0; text-align: center;">delivery_address</h1>
+<section class="page-titles">
+    <div class="page-titles__container">
+        <!-- === Заголовки страницы === -->
+        <div class="page-title display--none" data-menu="delivery-address">Адреса доставки</div>
+        <!-- / Заголовки страницы -->
+    </div>
+</section>
+
+
+<section class="profile">
+    <div class="profile__container">
+
+        <aside class="profile-menu">
+            <div class="profile-menu__title">
+    <h3 class="profile-menu__title-text">Меню:</h3>
+
+    <!-- Одна из стрелок должна появиться на малом экране -->
+    <div class="profile-menu__arrow-up-img display--none">
+        <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+    </div>
+    <div class="profile-menu__arrow-down-img display--none">
+        <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+    </div>
+</div>
+
+<div class="profile-menu__list">
+    <ul>
+        <li><a href="profile.html" class="profile-menu__item profile-menu-radio">Профиль</a></li>
+        <li><a href="profile_company.html" class="profile-menu__item profile-menu-radio">Профиль</a></li>
+        <li><a href="delivery_address.html" class="profile-menu__item profile-menu-radio">Адреса
+                доставки</a></li>
+        <li><a href="payment.html" class="profile-menu__item profile-menu-radio">Способы оплаты</a></li>
+        <li><a href="orders.html" class="profile-menu__item profile-menu-radio">Заказы</a></li>
+    </ul>
+
+    <a href="#" class="profile-menu__btn"><img src="image/profile/exit.svg" alt="Exit"> Выйти</a>
+</div>
+        </aside>
+
+        <main class="profile-main">
+
+            <!-- Адреса доставки -->
+            <div class="profile-main__delivery-address profile-module" data-menu="delivery-address">
+
+                <!-- Адрес доставки по умолчанию -->
+                <div class="profile-main__address--module default-address">
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text font-size-20-16">Адрес доставки по умолчанию</h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <form action="" class="edit-address-form">
+                        <div class="registration__requisites no-edit">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" disabled>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" disabled>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit edit-address-btn person">
+                                <input type="submit" value="Редактировать даннные">
+                            </div>
+
+                            <div class="registration--submit confirm-address-btn person display--none">
+                                <input type="submit" value="Подтвердить изменения">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Дополнительный адрес №1 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title additional">
+
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                1
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small">Доп. адрес №<span>
+                                1
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up" data-svg="">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down" data-svg="">
+                        </div>
+                    </div>
+
+                    <div class="content-block display--none">
+
+                        <form action="" class="edit-address-form">
+                            <div class="registration__requisites no-edit">
+
+                                <div class="requisites-item country">
+                                    <label for="country">Страна</label>
+                                    <input type="text" name="" placeholder="Беларусь" disabled>
+                                </div>
+
+                                <div class="requisites-item city">
+                                    <label for="city">Город</label>
+                                    <input type="text" name="" placeholder="Минск" disabled>
+                                </div>
+
+                                <div class="requisites-item address">
+                                    <label for="address">Адрес</label>
+                                    <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                                </div>
+
+                                <div class="requisites-item zip">
+                                    <label for="zip">Индекс</label>
+                                    <input type="text" name="" placeholder="220 004" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="registration__requisites grid-btn">
+
+                                <div class="registration--submit set-default-address-btn">
+                                    <a href="#" class="white-btn">Назначить по умолчанию</a>
+                                </div>
+
+                                <div class="registration--submit edit-address-btn person">
+                                    <input type="submit" value="Редактировать даннные">
+                                </div>
+
+                                <div class="registration--submit confirm-address-btn display--none person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Дополнительный адрес №2 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title additional">
+
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                2
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small display--flex">Доп. адрес №<span>
+                                2
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img display--none">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up" data-svg="">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down" data-svg="">
+                        </div>
+                    </div>
+
+                    <div class="content-block display--none">
+                        <form action="" class="edit-address-form">
+                            <div class="registration__requisites no-edit">
+
+                                <div class="requisites-item country">
+                                    <label for="country">Страна</label>
+                                    <input type="text" name="" placeholder="Беларусь" disabled>
+                                </div>
+
+                                <div class="requisites-item city">
+                                    <label for="city">Город</label>
+                                    <input type="text" name="" placeholder="Минск" disabled>
+                                </div>
+
+                                <div class="requisites-item address">
+                                    <label for="address">Адрес</label>
+                                    <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                                </div>
+
+                                <div class="requisites-item zip">
+                                    <label for="zip">Индекс</label>
+                                    <input type="text" name="" placeholder="220 004" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="registration__requisites grid-btn">
+                                <div class="registration--submit set-default-address-btn">
+                                    <a href="#" class="white-btn">Назначить по умолчанию</a>
+                                </div>
+
+                                <div class="registration--submit edit-address-btn person">
+                                    <input type="submit" value="Редактировать даннные">
+                                </div>
+
+                                <div class="registration--submit confirm-address-btn display--none person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Дополнительный адрес №3 -->
+                <div class="profile-main__address--module additional-address">
+                    <div class="profile-menu__title additional">
+                        <h3 class="profile-menu__title-text legal-addr-big display--flex">Дополнительный адрес №<span>
+                                3
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <h3 class="profile-menu__title-text legal-addr-small">Доп. адрес №<span>
+                                3
+                            </span>
+                            <button class="additional-address--delete-btn">
+                                <img src="image/profile/delete.svg" alt="Delete" data-svg="">
+                            </button>
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up" data-svg="">
+                        </div>
+                        <div class="profile-menu__arrow-down-img  display--none">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down" data-svg="">
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <form action="" class="edit-address-form">
+                            <div class="registration__requisites no-edit">
+
+                                <div class="requisites-item country">
+                                    <label for="country">Страна</label>
+                                    <input type="text" name="" placeholder="Беларусь" disabled>
+                                </div>
+
+                                <div class="requisites-item city">
+                                    <label for="city">Город</label>
+                                    <input type="text" name="" placeholder="Минск" disabled>
+                                </div>
+
+                                <div class="requisites-item address">
+                                    <label for="address">Адрес</label>
+                                    <input type="text" name="" placeholder="ул. Ленина, 31" disabled>
+                                </div>
+
+                                <div class="requisites-item zip">
+                                    <label for="zip">Индекс</label>
+                                    <input type="text" name="" placeholder="220 004" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="registration__requisites grid-btn">
+                                <div class="registration--submit set-default-address-btn">
+                                    <a href="#" class="white-btn">Назначить по умолчанию</a>
+                                </div>
+
+                                <div class="registration--submit edit-address-btn person">
+                                    <input type="submit" value="Редактировать даннные">
+                                </div>
+
+                                <div class="registration--submit confirm-address-btn display--none person">
+                                    <input type="submit" value="Подтвердить изменения">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Новый дополнительный адрес -->
+                <div class="profile-main__address--module new-address">
+
+                    <div class="profile-menu__title">
+                        <h3 class="profile-menu__title-text font-size-20-16 display--flex">
+                            Новый дополнительный адрес
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="image/profile/white_arrow-up.svg" alt="Arrow Up">
+                        </div>
+                        <div class="profile-menu__arrow-down-img">
+                            <img src="image/profile/white_arrow-down.svg" alt="Arrow Down">
+                        </div>
+                    </div>
+
+                    <form action="#" class="edit-address-form">
+                        <div class="registration__requisites">
+
+                            <div class="requisites-item country">
+                                <label for="country">Страна</label>
+                                <input type="text" name="" placeholder="Беларусь" required>
+                            </div>
+
+                            <div class="requisites-item city">
+                                <label for="city">Город</label>
+                                <input type="text" name="" placeholder="Минск" required>
+                            </div>
+
+                            <div class="requisites-item address">
+                                <label for="address">Адрес</label>
+                                <input type="text" name="" placeholder="ул. Ленина, 31" required>
+                            </div>
+
+                            <div class="requisites-item zip">
+                                <label for="zip">Индекс</label>
+                                <input type="text" name="" placeholder="220 004" required>
+                            </div>
+
+                        </div>
+
+                        <div class="registration__requisites grid-btn">
+                            <div class="registration--submit add-address-btn person">
+                                <input type="submit" value="Добавить новый адрес">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</section>
 
 <!-- footer -->
 <footer class="footer">

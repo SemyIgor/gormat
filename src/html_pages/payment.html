@@ -7,7 +7,147 @@
 @@include('html_parts/universals/bachdrop_wall.html')
 <!-- /mobile -->
 
-<h1 style="padding: 50px 0; text-align: center;">payment</h1>
+<section class="page-titles">
+    <div class="page-titles__container">
+        <!-- === Заголовки страницы === -->
+        <div class="page-title display--none" data-menu="payment-type">Способы оплаты</div>
+        <!-- / Заголовки страницы -->
+    </div>
+</section>
+
+
+<section class="profile">
+    <div class="profile__container">
+
+        <aside class="profile-menu">
+            @@include('html_parts/universals/_profile_menu.html')
+        </aside>
+
+        <main class="profile-main">
+
+            <!-- Способы оплаты -->
+            <div class="profile-main__payment-type profile-module" data-menu="payment-type">
+                <div class="profile-main__payment--module">
+
+                    <div class="profile-menu__title additional">
+
+                        <h3 class="profile-menu__title-text font-size-20-16 title-big">Предпочитаемый способ оплаты</h3>
+
+                        <h3 class="profile-menu__title-text font-size-20-16 title-small">Способ оплаты
+                        </h3>
+
+                        <!-- Одна из стрелок должна появиться на малом экране -->
+                        <div class="profile-menu__arrow-up-img">
+                            <img src="../image/profile/white_arrow-up.svg" alt="Arrow Up" data-svg="">
+                        </div>
+                        <div class="profile-menu__arrow-down-img display--none">
+                            <img src="../image/profile/white_arrow-down.svg" alt="Arrow Down" data-svg="">
+                        </div>
+                    </div>
+
+                    <form action="" class="payment-type-form">
+                        <div class="payment__logos">
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_1" required>
+                                <img src="../image/cart/pay_pal_logo.png" alt="PayPal Logo"
+                                    class="payment__logo custom-radio">
+                            </label>
+
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_2" required>
+                                <img src="../image/cart/master_card_logo.png" alt="MasterCard Logo"
+                                    class="payment__logo custom-radio">
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_3" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/visa_logo.png"
+                                        alt="Visa Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_4" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/pay_pal_logo.png"
+                                        alt="PayPal Logo"></div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_5" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/master_card_logo.png"
+                                        alt="MasterCard Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_6" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/visa_logo.png"
+                                        alt="Visa Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_7" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/pay_pal_logo.png"
+                                        alt="PayPal Logo"></div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_8" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/master_card_logo.png"
+                                        alt="MasterCard Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_9" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/visa_logo.png"
+                                        alt="Visa Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_10" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/pay_pal_logo.png"
+                                        alt="PayPal Logo"></div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_11" required>
+                                <div class="payment__logo custom-radio">
+                                    <img src="../image/cart/master_card_logo.png" alt="MasterCard Logo">
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_12" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/visa_logo.png"
+                                        alt="Visa Logo">
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_13" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/pay_pal_logo.png"
+                                        alt="PayPal Logo"></div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment-logo" class="real-radio" value="logo_14" required>
+                                <div class="payment__logo custom-radio"><img src="../image/cart/master_card_logo.png"
+                                        alt="MasterCard Logo">
+                                </div>
+                            </label>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</section>
 
 @@include('html_parts/universals/footer.html')
 @@include('html_parts/universals/foot.html')

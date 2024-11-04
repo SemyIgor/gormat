@@ -69,7 +69,6 @@
 
                         <li class="account-list__item account-list__item_login">
                             <a href="#" class="account-list__link">
-                                <!-- <img src="icons/account/login.png" alt="Аккаунт" class="account-list__icon"> -->
                                 <img src="icons/account/login.svg" alt="Аккаунт" class="account-list__icon _svg">
                             </a>
 
@@ -270,16 +269,18 @@
                                                             <input type="text" name="" placeholder="ИНН компании"
                                                                 maxlength="20" minlength="20" required />
                                                         </div>
-                                                    </div>
 
-                                                    <div class="registration__nds-checkbox pop-up">
-                                                        <label>
-                                                            <input type="radio" name="nds-checkbox" class="real-radio"
-                                                                value="">
+                                                        <div class="registration__nds-checkbox pop-up">
+                                                            <label>
+                                                                <input type="checkbox" name="nds-checkbox"
+                                                                    class="real-radio" value="">
 
-                                                            <span class="filter__custom-radio pop-up"></span>
-                                                            Я хочу получить счёт-фактуру НДС
-                                                        </label>
+                                                                <span class="filter__custom-radio pop-up"></span>
+                                                                <div>Я хочу
+                                                                    получить счёт-фактуру НДС</div>
+
+                                                            </label>
+                                                        </div>
                                                     </div>
 
                                                     <div
@@ -352,11 +353,14 @@
 
                                                         <div class="registration__address-checkbox">
                                                             <label>
-                                                                <input type="radio" name="address-checkbox"
+                                                                <input type="checkbox" name="address-checkbox"
                                                                     class="real-radio" value="">
 
                                                                 <span class="filter__custom-radio pop-up"></span>
-                                                                Юридический адрес совпадает с адресом доставки
+
+                                                                <div>Юридический
+                                                                    адрес совпадает с адресом доставки</div>
+
                                                             </label>
                                                         </div>
 
