@@ -5,15 +5,69 @@ function addressTabs() {
     );
 
     if (additionalAddressTitles.length > 0) {
-        additionalAddressTitles.forEach((address) => {
-            address.addEventListener("click", (event) => {
-                const toggleElements =
-                    event.currentTarget.parentElement.querySelectorAll(
-                        ".profile-menu__arrow-up-img, .profile-menu__arrow-down-img, .content-block"
-                    );
+        additionalAddressTitles.forEach((title) => {
+            title.addEventListener("click", (event) => {
+                const deleteBtn = title.querySelector(
+                    ".additional-address--delete-btn"
+                );
+                if (!ifHaveThisParent(event, deleteBtn)) {
+                    const toggleElements =
+                        event.currentTarget.parentElement.querySelectorAll(
+                            ".profile-menu__arrow-up-img, .profile-menu__arrow-down-img, .content-block"
+                        );
 
-                toggleElements.forEach((element) => {
-                    element.classList.toggle("display--none");
+                    toggleElements.forEach((element) => {
+                        element.classList.toggle("display--none");
+                    });
+                }
+            });
+        });
+    }
+}
+
+// Функция проверки наличия определённого родителя у элемента
+function ifHaveThisParent(event, parent) {
+    const element = event.target;
+
+    let currentElement = element;
+    while (currentElement) {
+        if (currentElement == parent) {
+            return true;
+        }
+        currentElement = currentElement.parentElement;
+    }
+    return false;
+}
+
+// Функция подавления ховера на галочке при наведении на корзину (delete)
+function hoverCartCheckMarkHoverPrevent() {
+    const additionalAddressDeleteBtns = document.querySelectorAll(
+        ".additional-address--delete-btn"
+    );
+
+    if (additionalAddressDeleteBtns.length > 0) {
+        additionalAddressDeleteBtns.forEach((btn) => {
+            btn.addEventListener("click", (event) => {
+                event.preventDefault();
+            });
+
+            btn.addEventListener("mouseenter", (event) => {
+                const checkMarks =
+                    event.currentTarget.parentElement.parentElement.querySelectorAll(
+                        ".profile-menu__arrow-up-img svg, .profile-menu__arrow-down-img svg"
+                    );
+                checkMarks.forEach((mark) => {
+                    mark.style.stroke = "white";
+                });
+            });
+
+            btn.addEventListener("mouseleave", (event) => {
+                const checkMarks =
+                    event.currentTarget.parentElement.parentElement.querySelectorAll(
+                        ".profile-menu__arrow-up-img svg, .profile-menu__arrow-down-img svg"
+                    );
+                checkMarks.forEach((mark) => {
+                    mark.style.stroke = "";
                 });
             });
         });
@@ -115,7 +169,7 @@ function completeEditAddress(btn) {
     });
 }
 
-// Функция обработки меню выбора модуля ЛК
+// Функция обработки меню выбора модуля ЛК (Личного Кабинета)
 function profileMenu() {
     // Находим все пункты меню
     const profileMenuList = document.querySelectorAll(
@@ -156,8 +210,10 @@ function changeProfileModule(chosenDataSet) {
     });
 }
 
-profileMenu();
-
 addressTabs();
+
+hoverCartCheckMarkHoverPrevent();
+
+profileMenu();
 
 editAddress();
