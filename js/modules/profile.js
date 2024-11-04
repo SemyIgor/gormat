@@ -214,6 +214,6 @@ addressTabs();
 
 hoverCartCheckMarkHoverPrevent();
 
-profileMenu();
+// profileMenu();
 
 editAddress();
