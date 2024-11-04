@@ -4824,15 +4824,24 @@ body.backdrop .backdrop-wall {
   height: 40px;
   background: var(--color-black-text);
   cursor: pointer;
+  /* Белая галочка на заголовке */
   /* Не работает, так как родительский блок обрезает блок заголовка и не даёт ему "наползти" на границы */
   /*         position: relative;
   width: calc(100% + 2px);
   left: -1px;
   z-index: 2000; */
+  /* Класс, управляющий зелёным цветом галочек при наведении
+  и красным цветом иконки корзины в заголовке */
 }
-.profile-menu__title.additional svg {
+.profile-menu__title svg {
   cursor: pointer;
   stroke: var(--color-white);
+}
+.profile-menu__title.additional {
+  /*             & svg {
+      cursor: pointer;
+      stroke: var(--color-white);
+  } */
 }
 .profile-menu__title.additional:hover .profile-menu__arrow-down-img svg {
   stroke: var(--color-green);
@@ -4942,11 +4951,12 @@ body.backdrop .backdrop-wall {
 }
 .profile .profile-main {
   margin-bottom: var(--margin-100-50);
-  /*     border: 2px solid var(--color-gray-header-bg);
-  border-radius: calc(var(--border-radius-6) + 2px); */
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.profile .profile-main__payment--module {
+  margin-bottom: 83px;
 }
 .profile .profile-main__personal-data--module, .profile .profile-main__address--module, .profile .profile-main__payment--module {
   border: 2px solid var(--color-gray-header-bg);
@@ -5404,6 +5414,11 @@ body.backdrop .backdrop-wall {
     width: calc(350px + 14 * (100vw - 767px) / 432);
   }
 }
+@media (max-width: 1194px) {
+  .profile .profile-main__payment--module {
+    margin-bottom: 0px;
+  }
+}
 @media (max-width: 1030px) {
   .orders.order__title {
     grid-template-columns: 80px 1fr 70px 79px 85px;
@@ -5644,6 +5659,9 @@ body.backdrop .backdrop-wall {
   }
   .orders-info--short {
     padding: 10px 16px 0px;
+  }
+  .orders {
+    /* Если в заказе скрыт перечень товаров, то добавляем отступ основному блоку, если не скрыт, то у него есть этот отступ */
   }
   .orders .additional-address {
     padding-bottom: 20px;
