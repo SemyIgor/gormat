@@ -2524,6 +2524,10 @@ $project-color: #8B4513; */
   margin-top: calc(var(--margin-40));
 }
 
+.filters {
+  margin-bottom: 20px;
+}
+
 .filters__container {
   padding-left: 15px;
   padding-right: 15px;
@@ -2574,6 +2578,10 @@ $project-color: #8B4513; */
 
 .grid-item .drop-list-content {
   width: 100%;
+}
+
+.category-top-pagination {
+  margin-bottom: 20px;
 }
 
 .category-top-pagination__container {
