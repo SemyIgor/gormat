@@ -61,12 +61,12 @@
     text-transform: uppercase;
 }
 
-.mobile-menu-catalog__item.forward > .mobile-menu-catalog__link {
+.mobile-menu-catalog__item.forward>.mobile-menu-catalog__link {
     background: url('../../icons/ui/arrow-chevron-right.svg') no-repeat right center / 5px 10px;
     padding-right: 13px;
 }
 
-.mobile-menu-catalog__item.back > .mobile-menu-catalog__link {
+.mobile-menu-catalog__item.back>.mobile-menu-catalog__link {
     background: url('../../icons/ui/arrow-chevron-left.svg') no-repeat left center / 5px 10px;
     padding-left: 13px;
 }
@@ -82,7 +82,7 @@
     pointer-events: none;
 }
 
-.active + .mobile-menu-catalog__sub-menu {
+.active+.mobile-menu-catalog__sub-menu {
     opacity: 1;
     pointer-events: unset;
 }
